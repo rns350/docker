@@ -1,0 +1,7 @@
+FROM umbra23/sqlite3:3.50.4
+
+WORKDIR /workspace
+
+COPY ./data.sql data.sql
+RUN touch core.db &&\
+    sqlite3 core.db < data.sql
