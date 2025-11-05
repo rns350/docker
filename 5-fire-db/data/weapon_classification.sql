@@ -4,4 +4,4 @@ CREATE TABLE weapon_classification (
 );
 
 INSERT INTO weapon_classification (name)
-VALUES ("Simple"), ("Martial");
+VALUES ("Melee"), ("Ranged");
