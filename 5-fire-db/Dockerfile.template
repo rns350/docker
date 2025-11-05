@@ -2,6 +2,11 @@ FROM umbra23/sqlite3:3.50.4
 
 WORKDIR /workspace
 
-COPY ./data.sql data.sql
+COPY data data
 RUN touch core.db &&\
-    sqlite3 core.db < data.sql
+    sqlite3 core.db < data/weapon_property.sql &&\
+    sqlite3 core.db < data/weapon_category.sql &&\
+    sqlite3 core.db < data/weapon_classification.sql &&\
+    sqlite3 core.db < data/weapon_mastery.sql &&\
+    sqlite3 core.db < data/damage_type.sql &&\
+    sqlite3 core.db < data/weapon.sql

@@ -1,9 +1,3 @@
-CREATE TABLE weapon_property (
-    weapon_property_id INTEGER PRIMARY KEY AUTOINCREMENT,
-    name VARCHAR(255) NOT NULL,
-    description TEXT
-);
-
 CREATE TABLE weapon (
     weapon_id INTEGER PRIMARY KEY AUTOINCREMENT,
     name VARCHAR(255) NOT NULL,
