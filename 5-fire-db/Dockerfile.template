@@ -6,6 +6,7 @@ COPY data data
 RUN touch ~/.sqliterc &&\
     echo -e ".headers on\n.mode column" >> ~/.sqliterc &&\
     touch core.db &&\
+    sqlite3 core.db < data/ability_scores.sql &&\
     sqlite3 core.db < data/armor_category.sql &&\
     sqlite3 core.db < data/armor_archetype.sql &&\
     sqlite3 core.db < data/damage_type.sql &&\
@@ -13,6 +14,10 @@ RUN touch ~/.sqliterc &&\
     sqlite3 core.db < data/weapon_classification.sql &&\
     sqlite3 core.db < data/weapon_mastery.sql &&\
     sqlite3 core.db < data/weapon_property.sql &&\
-    sqlite3 core.db < data/weapon_archetype.sql
+    sqlite3 core.db < data/weapon_archetype.sql &&\
+    sqlite3 core.db < data/adventuring_gear.sql &&\
+    sqlite3 core.db < data/storage.sql &&\
+    sqlite3 core.db < data/ammunition.sql &&\
+    sqlite3 core.db < data/tool.sql
 
 CMD ["/usr/bin/sqlite3", "core.db"]
