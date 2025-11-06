@@ -4,4 +4,12 @@ CREATE TABLE weapon_classification (
 );
 
 INSERT INTO weapon_classification (name)
-VALUES ("Melee"), ("Ranged");
+VALUES
+----------------------------------
+--- PHB Weapon Classifications ---
+----------------------------------
+
+--1
+("Melee"),
+--2
+("Ranged");

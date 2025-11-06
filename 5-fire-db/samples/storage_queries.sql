@@ -1,5 +1,8 @@
 -- Get dereferenced storage types
 SELECT
-    adventuring_gear.name as storage_gear
+    item.name as storage_gear,
+    item.weight,
+    item.description,
+    item.cost
 FROM storage
-JOIN adventuring_gear ON storage.adventuring_gear_id = adventuring_gear.adventuring_gear_id;
+JOIN item ON storage.item_id = item.item_id;

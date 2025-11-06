@@ -1,12 +1,13 @@
 -- Get dereferenced armors
 SELECT 
-    armor_archetype.name,
+    item.name,
     armor_category.name as armor_category,
-    base_armor_class,
-    max_dexterity_modifier,
-    strength_requirement,
-    stealth_disadvantage,
-    weight,
-    cost
+    armor_archetype.base_armor_class,
+    armor_archetype.max_dexterity_modifier,
+    armor_archetype.strength_requirement,
+    armor_archetype.stealth_disadvantage,
+    item.weight,
+    item.cost
 FROM armor_archetype
-JOIN armor_category ON armor_archetype.armor_category_id = armor_category.armor_category_id;
+JOIN armor_category ON armor_archetype.armor_category_id = armor_category.armor_category_id
+JOIN item ON armor_archetype.item_id = item.item_id;

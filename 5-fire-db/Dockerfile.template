@@ -7,6 +7,7 @@ RUN touch ~/.sqliterc &&\
     echo -e ".headers on\n.mode column" >> ~/.sqliterc &&\
     touch core.db &&\
     sqlite3 core.db < data/ability_scores.sql &&\
+    sqlite3 core.db < data/item.sql &&\
     sqlite3 core.db < data/armor_category.sql &&\
     sqlite3 core.db < data/armor_archetype.sql &&\
     sqlite3 core.db < data/damage_type.sql &&\

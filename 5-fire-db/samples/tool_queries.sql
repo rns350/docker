@@ -1,10 +1,11 @@
 -- Get dereferenced tools
 SELECT 
-    tool.name,
+    item.name,
     ability_score.name as ability_score,
-    utilize,
-    craft,
-    has_variants,
-    cost
+    tool.utilize,
+    tool.craft,
+    tool.has_variants,
+    item.cost
 FROM tool
 JOIN ability_score ON tool.ability_score_id = ability_score.ability_score_id;
+JOIN item ON tool.item_id = item.item_id;

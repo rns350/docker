@@ -1,64 +1,105 @@
 CREATE TABLE weapon_archetype (
     weapon_archetype_id INTEGER PRIMARY KEY AUTOINCREMENT,
-    name VARCHAR(255) NOT NULL,
+    item_id INTEGER NOT NULL,
     damage_type_id INT NOT NULL,
     damage VARCHAR(255) NOT NULL,
     weapon_category_id INT NOT NULL,
     weapon_classification_id INT NOT NULL,
     weapon_mastery_id INT NOT NULL,
-    weight REAL NOT NULL,
-    cost INT NOT NULL,
 
+    FOREIGN KEY (item_id) REFERENCES item(item_id)
     FOREIGN KEY (damage_type_id) REFERENCES damage_type(damage_type_id)
     FOREIGN KEY (weapon_category_id) REFERENCES weapon_category(weapon_category_id),
     FOREIGN KEY (weapon_classification_id) REFERENCES weapon_classification(weapon_classification_id),
     FOREIGN KEY (weapon_mastery_id) REFERENCES weapon_mastery_id(weapon_mastery_id)
 );
 
-INSERT INTO weapon_archetype (name, damage_type_id, damage, weapon_category_id, weapon_classification_id, weapon_mastery_id, weight, cost)
-VALUES 
+INSERT INTO weapon_archetype (item_id, damage_type_id, damage, weapon_category_id, weapon_classification_id, weapon_mastery_id)
+VALUES
+-----------------------------
+--- PHB Weapon Archetypes ---
+-----------------------------
+
 -- Simple Melee
-    ("Club", 2, "1d4", 1, 1, 6, 2, 10),
-    ("Dagger", 8, "1d4", 1, 1, 3, 1, 200),
-    ("Greatclub", 2, "1d8", 1, 1, 4, 10, 20),
-    ("Handaxe", 12, "1d6", 1, 1, 8, 2, 500),
-    ("Javelin", 8, "1d6", 1, 1, 6, 2, 50),
-    ("Light Hammer", 2, "1d4", 1, 1, 3, 2, 200),
-    ("Mace", 2, "1d6", 1, 1, 5, 4, 500),
-    ("Quarterstaff", 2, "1d6", 1, 1, 7, 4, 20),
-    ("Sickle", 12, "1d4", 1, 1, 3, 2, 100),
-    ("Spear", 2, "1d6", 1, 1, 5, 3, 100),
+    --1 Club
+    (101, 2, "1d4", 1, 1, 6),
+    --2 Dagger
+    (102, 8, "1d4", 1, 1, 3),
+    --3 Greatclub
+    (103, 2, "1d8", 1, 1, 4),
+    --4 Handaxe
+    (104, 12, "1d6", 1, 1, 8),
+    --5 Javelin
+    (105, 8, "1d6", 1, 1, 6),
+    --6 Light Hammer
+    (106, 2, "1d4", 1, 1, 3),
+    --7 Mace
+    (107, 2, "1d6", 1, 1, 5),
+    --8 Quarterstaff
+    (108, 2, "1d6", 1, 1, 7),
+    --9 Sickle
+    (109, 12, "1d4", 1, 1, 3),
+    --10 Spear
+    (110, 2, "1d6", 1, 1, 5),
 -- Simple Ranged
-    ("Dart", 8, "1d4", 1, 2, 8, 0.25, 5),
-    ("Light Crossbow", 8, "1d8", 1, 2, 6, 5, 2500),
-    ("Shortbow", 8, "1d6", 1, 2, 8, 2, 2500),
-    ("Sling", 2, "1d4", 1, 2, 6, 0, 10),
+    --11 Dart
+    (111, 8, "1d4", 1, 2, 8),
+    --12 Light Crossbow
+    (112, 8, "1d8", 1, 2, 6),
+    --13 Shortbow
+    (113, 8, "1d6", 1, 2, 8),
+    --14 Sling
+    (114, 2, "1d4", 1, 2, 6),
 -- Martial Melee
-    ("Battleaxe", 12, "1d8", 2, 1, 7, 4, 1000),
-    ("Flail", 2, "1d8", 2, 1, 5, 2, 1000),
-    ("Glaive", 12, "1d10", 2, 1, 2, 6, 2000),
-    ("Greataxe", 12, "1d12", 2, 1, 1, 7, 3000),
-    ("Greatsword", 12, "2d6", 2, 1, 2, 6, 5000),
-    ("Halberd", 12, "1d10", 2, 1, 1, 6, 2000),
-    ("Lance", 8, "1d10", 2, 1, 7, 6, 1000),
-    ("Longsword", 12, "1d8", 2, 1, 5, 3, 1500),
-    ("Maul", 2, "2d6", 2, 1, 7, 10, 1000),
-    ("Morningstar", 8, "1d8", 2, 1, 5, 4, 1500),
-    ("Pike", 8, "1d10", 2, 1, 4, 18, 500),
-    ("Rapier", 8, "1d8", 2, 1, 8, 2, 2500),
-    ("Scimitar", 12, "1d6", 2, 1, 3, 3, 2500),
-    ("Shortsword", 8, "1d6", 2, 1, 8, 2, 1000),
-    ("Trident", 8, "1d8", 2, 1, 7, 4, 500),
-    ("Warhammer", 2, "1d8", 2, 1, 4, 5, 1500),
-    ("War Pick", 8, "1d8", 2, 1, 5, 2, 500),
-    ("Whip", 12, "1d4", 2, 1, 6, 3, 200),
+    --15 Battleaxe
+    (115, 12, "1d8", 2, 1, 7),
+    --16 Flail
+    (116, 2, "1d8", 2, 1, 5),
+    --17 Glaive
+    (117, 12, "1d10", 2, 1, 2),
+    --18 Greataxe
+    (118, 12, "1d12", 2, 1, 1),
+    --19 Greatsword
+    (119, 12, "2d6", 2, 1, 2),
+    --20 Halberd
+    (120, 12, "1d10", 2, 1, 1),
+    --21 Lance
+    (121, 8, "1d10", 2, 1, 7),
+    --22 Longsword
+    (122, 12, "1d8", 2, 1, 5),
+    --23 Maul
+    (123, 2, "2d6", 2, 1, 7),
+    --24 Morningstar
+    (124, 8, "1d8", 2, 1, 5),
+    --25 Pike
+    (125, 8, "1d10", 2, 1, 4),
+    --26 Rapier
+    (126, 8, "1d8", 2, 1, 8),
+    --27 Scimitar
+    (127, 12, "1d6", 2, 1, 3),
+    --28 Shortsword
+    (128, 8, "1d6", 2, 1, 8),
+    --29 Trident
+    (129, 8, "1d8", 2, 1, 7),
+    --30 Warhammer
+    (130, 2, "1d8", 2, 1, 4),
+    --31 War Pick
+    (131, 8, "1d8", 2, 1, 5),
+    --32 Whip
+    (132, 12, "1d4", 2, 1, 6),
 -- Martial Ranged
-    ("Blowgun", 8, "1", 2, 2, 8, 1, 1000),
-    ("Hand Crossbow", 8, "1d6", 2, 2, 8, 3, 7500),
-    ("Heavy Crossbow", 8, "1d10", 2, 2, 4, 18, 5000),
-    ("Longbow", 8, "1d8", 2, 2, 6, 2, 5000),
-    ("Musket", 8, "1d12", 2, 2, 6, 10, 50000),
-    ("Pistol", 8, "1d10", 2, 2, 8, 3, 25000);
+    --33 Blowgun
+    (133, 8, "1", 2, 2, 8),
+    --34 Hand Crossbow
+    (134, 8, "1d6", 2, 2, 8),
+    --35 Heavy Crossbow
+    (135, 8, "1d10", 2, 2, 4),
+    --36 Longbow
+    (136, 8, "1d8", 2, 2, 6),
+    --37 Musket
+    (137, 8, "1d12", 2, 2, 6),
+    --38 Pistol
+    (138, 8, "1d10", 2, 2, 8);
 
 CREATE TABLE weapon_property_assignment (
     weapon_archetype_id INTEGER NOT NULL,

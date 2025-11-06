@@ -6,4 +6,12 @@ CREATE TABLE armor_category (
 );
 
 INSERT INTO armor_category (name, time_on, time_off)
-VALUES ("Light", 60, 60),("Medium", 300, 60),("Heavy", 600, 300),("Shield", 0, 0);
+VALUES
+--1
+("Light", 60, 60),
+--2
+("Medium", 300, 60),
+--3
+("Heavy", 600, 300),
+--4
+("Shield", 0, 0);

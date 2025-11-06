@@ -4,4 +4,20 @@ CREATE TABLE ability_score (
 );
 
 INSERT INTO ability_score (name)
-VALUES ("Strength"), ("Dexterity"), ("Constitution"), ("Intelligence"), ("Wisdom"), ("Charisma");
+VALUES
+--------------------------
+--- PHB Ability Scores ---
+--------------------------
+
+--1
+("Strength"),
+--2
+("Dexterity"),
+--3
+("Constitution"),
+--4
+("Intelligence"),
+--5
+("Wisdom"),
+--6
+("Charisma");

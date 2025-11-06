@@ -1,92 +1,177 @@
 CREATE TABLE adventuring_gear (
     adventuring_gear_id INTEGER PRIMARY KEY AUTOINCREMENT,
-    name VARCHAR(255) NOT NULL,
-    weight INTEGER,
-    description TEXT,
-    cost INT NOT NULL
+    item_id INTEGER NOT NULL,
+
+    FOREIGN KEY (item_id) REFERENCES item(item_id)
 );
 
-INSERT INTO adventuring_gear (name, weight, description, cost)
+INSERT INTO adventuring_gear (item_id)
 VALUES
-("Acid", 1, "", 2500),
-("Alchemist's Fire", 1, "", 5000),
-("Ammunition", -1, "", -1),
-("Antitoxin", NULL, "", 5000),
-("Arcane Focus", -1, "", -1),
-("Backpack", 5, "", 200),
-("Ball Bearings", 2, "", 100),
-("Barrel", 70, "", 200),
-("Basket", 2, "", 40),
-("Bedroll", 7, "", 100),
-("Bell", NULL, "", 100),
-("Blanket", 3, "", 50),
-("Block and Tackle", 5, "", 100),
-("Book", 5, "", 2500),
-("Bottle, Glass", 2, "", 200),
-("Bucket", 2, "", 5),
-("Burglar's Pack", 42, "", 1600),
-("Caltrops", 2, "", 100),
-("Candle", NULL, "", 100),
-("Case, Crossbow Bolt", 1, "A Crossbow Bolt Case holds up to 20 Bolts.", 100),
-("Case, Map or Scroll", 1, "A Map or Scroll Case holds up to 10 sheets of paper or 5 sheets or parchment.", 100),
-("Chain", 10, "", 500),
-("Chest", 25, "", 500),
-("Climber's Kit", 12, "", 2500),
-("Clothes, Fine", 6, "", 1500),
-("Clothes, Traveler's", 4, "", 200),
-("Component Pouch", 2, "", 2500),
-("Costume", 4, "", 500),
-("Crowbar", 5, "", 200),
-("Diplomat's Pack", 39, "", 39),
-("Druidic Focus", -1, "", -1),
-("Dungeoneer's Pack", 55, "", 1200),
-("Entertainer's Pack", 58.5, "", 4000),
-("Explorer's Pack", 55, "", 1000),
-("Flask", 1, "", 2),
-("Grappling Hook", 4, "", 200),
-("Healer's Kit", 3, "", 500),
-("Holy Symbol", -1, "", -1),
-("Holy Water", 1, "", 2500),
-("Hunting Trap", 25, "", 500),
-("Ink", NULL, "", 1000),
-("Ink Pen", NULL, "", 2),
-("Jug", 4, "", 2),
-("Ladder", 25, "", 10),
-("Lamp", 1, "", 50),
-("Lantern, Bullseye", 2, "", 1000),
-("Lantern, Hooded", 2, "", 500),
-("Lock", 1, "", 1000),
-("Magnifying Glass", NULL, "", 10000),
-("Manacles", 6, "", 200),
-("Map", NULL, "", 100),
-("Mirror", 0.5, "", 500),
-("Net", 3, "", 100),
-("Oil", 1, "", 10),
-("Paper", NULL, "", 20),
-("Parchment", NULL, "", 10),
-("Perfume", NULL, "", 500),
-("Poison, Basic", NULL, "", 10000),
-("Pole", 7, "", 5),
-("Pot, Iron", 10, "", 200),
-("Potion of Healing", 0.5, "", 5000),
-("Pouch", 1, "A Pouch holds up to 6 pounds within one-fifth of a cubic foot.", 50),
-("Priest's Pack", 29, "", 3300),
-("Quiver", 1, "A Quiver holds up to 20 Arrows", 100),
-("Ram, Portable", 35, "", 400),
-("Rations", 2, "", 50),
-("Robe", 4, "", 100),
-("Rope", 5, "", 100),
-("Sack", 0.5, "", 1),
-("Scholar's Pack", 22, "", 4000),
-("Shovel", 5, "", 200),
-("Signal Whistle", NULL, "", 5),
-("Spell Scroll (Cantrip)", NULL, "", 3000),
-("Spell Scroll (Level 1)", NULL, "", 5000),
-("Spikes, Iron", 5, "", 100),
-("Spyglass", 1, "", 100000),
-("String", NULL, "", 10),
-("Tent", 20, "", 200),
-("Tinderbox", 1, "", 50),
-("Torch", 1, "", 1),
-("Vial", NULL, "", 100),
-("Waterskin", 5, "", 20);
+----------------------------
+--- PHB Adventuring Gear ---
+----------------------------
+
+--1 Acid
+(1),
+--2 Alchemist's Fire
+(2),
+--3 Ammunition
+(3),
+--4 Antitoxin
+(4),
+--5 Arcane Focus 
+(5),
+--6 Backpack
+(6),
+--7 Ball Bearings
+(7),
+--8 Barrel
+(8),
+--9 Basket
+(9),
+--10 Bedroll
+(10),
+--11 Bell
+(11),
+--12 Blanket
+(12),
+--13 Block and Tackle
+(13),
+--14 Book
+(14),
+--15 Bottle, Glass
+(15),
+--16 Bucket
+(16),
+--17 Burglar's Pack
+(17),
+--18 Caltrops
+(18),
+--19 Candle
+(19),
+--20 Case, Crossbow Bolt
+(20),
+--21 Case, Map or Scroll
+(21),
+--22 Chain
+(22),
+--23 Chest
+(23),
+--24 Climber's Kit
+(24),
+--25 Clothes, Fine
+(25),
+--26 Clothes, Traveler's
+(26),
+--27 Component Pouch
+(27),
+--28 Costume
+(28),
+--29 Crowbar
+(29),
+--30 Diplomat's Pack
+(30),
+--31 Druidic Focus
+(31),
+--32 Dungeoneer's Pack
+(32),
+--33 Entertainer's Pack
+(33),
+--34 Explorer's Pack
+(34),
+--35 Flask
+(35),
+--36 Grappling Hook
+(36),
+--37 Healer's Kit
+(37),
+--38 Holy Symbol
+(38),
+--39 Holy Water
+(39),
+--40 Hunting Trap
+(40),
+--41 Ink
+(41),
+--42 Ink Pen
+(42),
+--43 Jug
+(43),
+--44 Ladder
+(44),
+--45 Lamp
+(45),
+--46 Lantern, Bullseye
+(46),
+--47 Lantern, Hooded
+(47),
+--48 Lock
+(48),
+--49 Magnifying Glass
+(49),
+--50 Manacles
+(50),
+--51 Map
+(51),
+--52 Mirror
+(52),
+--53 Net
+(53),
+--54 Oil
+(54),
+--55 Paper
+(55),
+--56 Parchment
+(56),
+--57 Perfume
+(57),
+--58 Poison, Basic
+(58),
+--59 Pole
+(59),
+--60 Pot, Iron
+(60),
+--61 Potion of Healing
+(61),
+--62 Pouch
+(62),
+--63 Priest's Pack
+(63),
+--64 Quiver
+(64),
+--65 Ram, Portable
+(65),
+--66 Rations
+(66),
+--67 Robe
+(67),
+--68 Rope
+(68),
+--69 Sack
+(69),
+--70 Scholar's Pack"
+(70),
+--71 Shovel
+(71),
+--72 Signal Whistle
+(72),
+--73 Spell Scroll (Cantrip)
+(73),
+--74 Spell Scroll (Level 1)
+(74),
+--75 Spikes, Iron
+(75),
+--76 Spyglass
+(76),
+--77 String
+(77),
+--78 Tent
+(78),
+--79 Tinderbox
+(79),
+--80 Torch
+(80),
+--81 Vial
+(81),
+--82 Waterskin
+(82);

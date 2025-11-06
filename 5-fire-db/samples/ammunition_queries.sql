@@ -1,10 +1,11 @@
 -- Get dereferenced ammunitions
 SELECT 
-    ammunition.type,
+    ammunition_item.name as ammunition_name,
     ammunition.ammount,
-    adventuring_gear.name as storage_name,
-    ammunition.weight,
-    ammunition.cost
+    storage_item.name as storage_name,
+    ammunition_item.weight,
+    ammunition_item.cost
 FROM ammunition
 JOIN storage ON ammunition.storage_id = storage.storage_id
-JOIN adventuring_gear ON storage.adventuring_gear_id = adventuring_gear.adventuring_gear_id;
+JOIN item AS storage_item ON storage.item_id = storage_item.item_id
+JOIN item AS ammunition_item ON ammunition.item_id = ammunition_item.item_id;

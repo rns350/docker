@@ -1,18 +1,26 @@
 CREATE TABLE ammunition (
     ammunition_id INTEGER PRIMARY KEY AUTOINCREMENT,
-    type VARCHAR(255) NOT NULL,
+    item_id INTEGER NOT NULL,
     ammount INTEGER NOT NULL,
     storage_id INTEGER NOT NULL,
-    weight REAL NOT NULL,
-    cost INTEGER NOT NULL,
 
+    FOREIGN KEY (item_id) REFERENCES item(item_id)
     FOREIGN KEY (storage_id) REFERENCES storage(storage_id)
 );
 
-INSERT INTO ammunition (type, ammount, storage_id, weight, cost)
+INSERT INTO ammunition (item_id, ammount, storage_id)
 VALUES
-("Arrows", 20, 18, 1, 100),
-("Bolts", 20, 6, 1.5, 100),
-("Bullets, Firearm", 10, 17, 2, 300),
-("Bullets, Sling", 20, 17, 1.5, 4),
-("Needles", 50, 17, 1, 100);
+----------------------
+--- PHB Ammunition ---
+----------------------
+
+--1 Arrows
+(83, 20, 18),
+--2 Bolts
+(84, 20, 6),
+--3 Bullets, Firearm
+(85, 10, 17),
+--4 Bullets, Sling
+(86, 20, 17),
+--5 Needles
+(87, 50, 17);

@@ -1,51 +1,55 @@
 CREATE TABLE storage (
     storage_id INTEGER PRIMARY KEY AUTOINCREMENT,
-    adventuring_gear_id INT NOT NULL,
+    item_id INT NOT NULL,
 
-    FOREIGN KEY (adventuring_gear_id) REFERENCES adventuring_gear(adventuring_gear_id)
+    FOREIGN KEY (item_id) REFERENCES item(item_id)
 );
 
-INSERT INTO storage (adventuring_gear_id)
+INSERT INTO storage (item_id)
 VALUES
--- Backpack
+-------------------
+--- PHB Storage ---
+-------------------
+
+--1 Backpack
 (6),
--- Barrel
+--2 Barrel
 (8),
--- Basket
+--3 Basket
 (9),
--- Bottle, Glass
+--4 Bottle, Glass
 (15),
--- Bucket 
+--5 Bucket 
 (16),
--- Case, Crossbow Bolt 
+--6 Case, Crossbow Bolt 
 (20),
--- Case, Map or Scroll
+--7 Case, Map or Scroll
 (21),
--- Chest
+--8 Chest
 (23),
--- Component Pouch
+--9 Component Pouch
 (27),
--- Flask
+--10 Flask
 (35),
--- Jug
+--11 Jug
 (43),
--- Lamp
+--12 Lamp
 (45),
--- Lantern, Bullseye
+--13 Lantern, Bullseye
 (46),
--- Lantern, Hooded
+--14 Lantern, Hooded
 (47),
--- Net
+--15 Net
 (53),
--- Pot, Iron
+--16 Pot, Iron
 (60),
--- Pouch
+--17 Pouch
 (62),
--- Quiver
+--18 Quiver
 (64),
--- Sack
+--19 Sack
 (69),
--- Vial
+--20 Vial
 (81),
--- Waterskin
+--21 Waterskin
 (82);
