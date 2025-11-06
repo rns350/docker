@@ -6,6 +6,9 @@ CREATE TABLE action_type (
 
 INSERT INTO action_type (name, description)
 VALUES
+------------------------
+--- PHB Action Types ---
+------------------------
 ( --1
     "Attack",
     "When you take the Attack action, you can make one attack roll with a weapon or an unarmed strike." || CHAR(13) || CHAR(10) || CHAR(9)

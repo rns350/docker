@@ -20,6 +20,7 @@ RUN touch ~/.sqliterc &&\
     sqlite3 core.db < data/storage.sql &&\
     sqlite3 core.db < data/ammunition.sql &&\
     sqlite3 core.db < data/tool.sql &&\
+    sqlite3 core.db < data/condition.sql &&\
     sqlite3 core.db < data/action_type.sql
 
 CMD ["/usr/bin/sqlite3", "core.db"]
