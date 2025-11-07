@@ -10,6 +10,7 @@ RUN touch ~/.sqliterc &&\
     sqlite3 core.db < data/enum/size.sql &&\
     sqlite3 core.db < data/enum/ability_modifier.sql &&\
     sqlite3 core.db < data/enum/ability.sql &&\
+    sqlite3 core.db < data/enum/area_of_effect.sql &&\
     sqlite3 core.db < data/enum/action_type.sql &&\
     sqlite3 core.db < data/enum/attitude.sql &&\
     sqlite3 core.db < data/enum/condition.sql &&\

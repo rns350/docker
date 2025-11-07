@@ -143,11 +143,14 @@ VALUES
 ),
 ( --26
     "Challenge Rating",
-    ""
+    "Challenge Rating (CR) summarizes the threat a monster poses to a group of four player characters.  Compare a monster's CR to the characters' level.  If the CR "
+ || "is higher, the monster is likely a danger.  If the CR is lower, the monster likely poses little threat.  But circumstances and the number of player characters can "
+ || "significantly alter how threatening a monster is in actual play.  The Dungeon Master's Guide provides guidance to the DM on using CR while planning potential "
+ || "combat encounters."
 ),
 ( --27
     "Character Sheet",
-    ""
+    "A Character Sheet is a sheet of paper or digital record that you use to track your character's information."
 ),
 ( --28
     "Charmed",
@@ -157,7 +160,8 @@ VALUES
 ),
 ( --29
     "Climbing",
-    ""
+    "While you're climbing, each foot of movement costs 1 extra foot (2 extra feet in Difficult Terrain).  You ignore this extra cost if you have a Climb Speed and use it "
+ || "to climb."
 ),
 ( --30
     "Climb Speed",
@@ -165,15 +169,25 @@ VALUES
 ),
 ( --31
     "Concentration",
-    ""
+    "Some spells and other effects require Concentration to remain active, as specified in their descriptions.  If the effect's creator loses Concentration, the effect "
+ || "ends.  If the effect has a maximum duration, the effect's description specifies how long the creator can concentrate on it: up to 1 minute, 1 hour, or some other "
+ || "duration.  The creator can end Concentration at any time (no action required).  The following factors break Concentration." || CHAR(13) || CHAR(10) || CHAR(9)
+ || "Another Concentration Effect: You lose Concentration on an effect the moment you start casting a spell that requires Concentration or activate another effect that "
+ || "requires Concentration." || CHAR(13) || CHAR(10) || CHAR(9) || "Damage: If you take damage, you must succeed on a Constitution saving throw to maintain Concentration.  "
+ || "The DC equals 10 or half the damage taken (round down), whichever number is higher, up to a maximum DC of 30." || CHAR(13) || CHAR(10) || CHAR(9) || "Incapacitated or "
+ || "Dead: Your Concentration ends if you have the Incapacitated condition or you die."
 ),
 ( --32
     "Condition",
-    ""
+    "A condition is a temporary game state.  The definition of a condition says how it affects its recipient, and various rules define how to end a condition.  A condition "
+ || "doesn't stack with itself; a recipient either has a condition or doesn't.  The Exhaustion condition is an exception to that rule."
 ),
 ( --33
     "Cone",
-    ""
+    "A Cone is an area of effect that extends in straight lines from a point of origin in a direction its creator chooses.  A Cone's width at any point along its length is "
+ || "equal to that point's distance from the point of origin.  For example, a Cone is 15 feet wide at a point along its length that is 15 feet from the point of origin.  "
+ || "The effect that creates a Cone specifies its maximum length." || CHAR(13) || CHAR(10) || CHAR(9) || "A Cone's point of origin isn't included in the area of effect "
+ || "unless its creator decides otherwise."
 ),
 ( --34
     "Cover",
@@ -197,7 +211,9 @@ VALUES
 ),
 ( --39
     "Cube",
-    ""
+    "A Cube is an area of effect that extends in straight lines from a point of origin located anywhere on a face of the Cube.  The effect that creates a Cube specifies its "
+ || "size, which is the length of each side." || CHAR(13) || CHAR(10) || CHAR(9) || "A Cube's point of origin isn't included in the area of effect unless its creator decides "
+ || "otherwise."
 ),
 ( --40
     "Curses",
@@ -205,7 +221,9 @@ VALUES
 ),
 ( --41
     "Cylinder",
-    ""
+    "A Cylinder is an area of effect that extends in straight lines from a point of origin located at the center of the circular top or bottom of the Cylinder.  The effect "
+ || "that creates the Cylinder specifies the radius of the Cylinder's base and the Cylinder's height." || CHAR(13) || CHAR(10) || CHAR(9) || "A Cylinder's point of origin "
+ || "isn't included in the area of effect unless its creator decides otherwise."
 ),
 ( --42
     "D20 Test",
@@ -292,7 +310,10 @@ VALUES
 ),
 ( --60
     "Emanation",
-    ""
+    "An Emanation is an area of effect that extends in straight lines from a creature or an object in all directions.  The effect that creates an Emanation specifies the "
+ || "distance it extends." || CHAR(13) || CHAR(10) || CHAR(9) || "An Emanation moves with the creature or object that is its origin unless it is an instantaneous or a "
+ || "stationary effect." || CHAR(13) || CHAR(10) || CHAR(9) || "An Emination's origin (creature or object) isn't included in the area of effect unless its creator decides "
+ || "otherwise."
 ),
 ( --61
     "Encounter",
@@ -464,7 +485,8 @@ VALUES
 ),
 ( --95
     "Line",
-    ""
+    "A Line is an area of effect that extends from a point of origin in a straight path along its length and covers an area defined by its width.  The effect that creates "
+ || "a line specifies its length and width.  A Line's point of origin isn't included in the area of effect unless its creator decides otherwise."
 ),
 ( --96
     "Long Jump",
@@ -649,7 +671,8 @@ VALUES
 ),
 ( --133
     "Sphere",
-    ""
+    "A Sphere is an area of effect that extends in straight lines from a point of origin outward in all directions.  The effect that creates a Sphere specifies the distance "
+ || "it extends as the radius of the Sphere." || CHAR(13) || CHAR(10) || CHAR(9) || "A Sphere's point of origin is included in the Sphere's area of effect."
 ),
 ( --134
     "Stable",
