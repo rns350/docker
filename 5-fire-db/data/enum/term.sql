@@ -191,23 +191,27 @@ VALUES
 ),
 ( --34
     "Cover",
-    ""
+    "Cover provides a degree of protection to a target behind it.  There are three degrees of cover, each of which provides a different benefit to a target: "
+ || "Half Cover (+2 bonus to AC and Dexterity saving throws), Three-Quarters Cover (+5 bonus to AC and Dexterity saving throws), and Total Cover (can't be targeted "
+ || "directly).  If behind more than one degree of cover, a target benefits only from the most protective degree."
 ),
 ( --35
     "Crawling",
-    ""
+    "While you're crawling, each foot of movement costs 1 extra foot (2 extra feet in Difficult Terrain)."
 ),
 ( --36
     "Creature",
-    ""
+    "Any being in the game, including a player's character, is a creature."
 ),
 ( --37
     "Creature Type",
-    ""
+    "Every creature, including every player character, has a tag in the rules that identifies the type of creature it is.  Most player characters are of the Humanoid type."
+ || CHAR(13) || CHAR(10) || CHAR(9) || "The types don't have rules themselves, but some rules in the game affect creatures of certain types in different ways."
 ),
 ( --38
     "Critical Hit",
-    ""
+    "If you roll a 20 on the d20 for an attack roll, you score a Critical Hit, and the attack hits regardless of any modifiers or the target's AC.  A Critical Hit lets you "
+ || "roll extra dice for the attack's damage against the target.  Roll all of the attack's damage dice twice and add them together.  Then add any relevant modifiers."
 ),
 ( --39
     "Cube",
@@ -217,7 +221,8 @@ VALUES
 ),
 ( --40
     "Curses",
-    ""
+    "Some game effects curse a creature or an object.  The effect that confer a curse defines what the curse does.  Curses can be removed by the Remove Curse and Greater "
+ || "Restoration spells or other magic that explicitly ends curses."
 ),
 ( --41
     "Cylinder",
@@ -227,23 +232,27 @@ VALUES
 ),
 ( --42
     "D20 Test",
-    ""
+    "D20 Tests encompass the three main d20 rolls of the game: ability checks, attack rolls, and saving throws.  If something in the game affects D20 Tests, it affects "
+ || "all three of these rolls.  The DM determines whether a D20 Test is warranted in a given circumstance."
 ),
 ( --43
     "Damage",
-    ""
+    "Damage represents harm that causes a creature or an object to lose Hit Points."
 ),
 ( --44
     "Damage Roll",
-    ""
+    "A damage roll is a die roll, adjusted by any applicable modifiers, that deals damage to a target."
 ),
 ( --45
     "Damage Threshold",
-    ""
+    "A creature or an object that has a damage threshold has Immunity to all damage unless it takes an amount of damage from a single attack or effect equal to or "
+ || "greater than its damage threshold, in which case it takes that entire instance of damage.  Any damage that fails to meet or exceed the damage threshold is "
+ || "superficial and doesn't reduce Hit Points.  For example, if an object has a damage threshold of 10, the object takes no damage if 9 damage is dealt to it, since "
+ || "that damage fails to exceed the threshold.  If the same object is dealt 11 damage, it takes all of that damage."
 ),
 ( --46
     "Damage Types",
-    ""
+    "Attacks and other harmful effects deal different types of damage.  Damage types have no rules of their own, but other rules, such as Resistance, rely on the types."
 ),
 ( --47
     "Darkness",
@@ -264,7 +273,12 @@ VALUES
 ),
 ( --50
     "Dead",
-    ""
+    "A dead creature has no Hit Points and can't regain them unless it is first revived by magic such as the Raise Dead or Revivify spell.  When such a spell is cast, "
+ || "the spirit knows who is casting it and can refuse.  The spirit of a dead creature has left the body and departed for the Outer Planes, and revivng the creature "
+ || "requires caling the spirit back." || CHAR(13) || CHAR(10) || CHAR(9) || "If the creature returns to life, the revival effect determines the creature's current Hit Points.  "
+ || "Unless otherwise stated, the creature returns to life with any conditions, magical contagions, or curses that were affecting it at death if the durations of those "
+ || "effects are still ongoing.  If the creature died with any Exhaustion levels, it returns with 1 fewer level.  If the creature had Attunement to one or more magic items, "
+ || "it is not longer attuned to them."
 ),
 ( --51
     "Deafened",
@@ -273,7 +287,7 @@ VALUES
 ),
 ( --52
     "Death Saving Throw",
-    ""
+    "A player character must make a Death Saving Throw (also called a Death Save) if they start their turn with 0 Hit Points."
 ),
 ( --53
     "Dehydration",
@@ -283,11 +297,16 @@ VALUES
 ),
 ( --54
     "Difficult Terrain",
-    ""
+    "If a space is Difficult Terrain, every foot of movement in that space costs 1 extra foot.  For example, moving 5 feet through Difficult Terrain costs 10 feet of movement.  "
+ || "Difficult Terrain isn't cumulative; either a space is Difficult Terrain or it isn't." || CHAR(13) || CHAR(10) || CHAR(9) || "A space is Difficult Terrain if the space contains "
+ || "any of the following or something similar:" || CHAR(13) || CHAR(10) || CHAR(9) || "- A creature that isn't tiny or your ally" || CHAR(13) || CHAR(10) || CHAR(9) 
+ || "- Furniture that is sized for creatures of your size or larger" || CHAR(13) || CHAR(10) || CHAR(9) || "- Heavy snow, ice, rubble, or undergrowth"
+ || CHAR(13) || CHAR(10) || CHAR(9) || "- Liquid that's between shin- and waist-deep" || CHAR(13) || CHAR(10) || CHAR(9) || "A narrow opening sized for a creature one size "
+ || "than you."
 ),
 ( --55
     "Difficulty Class",
-    ""
+    "A Difficulty Class (DC) is the target number for an ability check or a saving throw."
 ),
 ( --56
     "Dim Light",
@@ -296,7 +315,8 @@ VALUES
 ),
 ( --57
     "Disadvantage",
-    ""
+    "If you have Disadvantage on a D20 Test, roll two d20s and use the lower roll.  A roll can't be affected by more than one Disadvantage, and Advantage and Disadvantage "
+ || "on the same roll cancel each other."
 ),
 ( --58
     "Disengage",
@@ -317,11 +337,11 @@ VALUES
 ),
 ( --61
     "Encounter",
-    ""
+    "An encounter is a scene in an adventure that is part of at least one of the game's three pillars: social interaction, exploration, or combat."
 ),
 ( --62
     "Enemy",
-    ""
+    "A creature is your enemy if it fights against you in combat, actively works to harm you, or is designated as your enemy by the rules or DM.  "
 ),
 ( --63
     "Exhaustion",
@@ -333,11 +353,14 @@ VALUES
 ),
 ( --64
     "Experience Points",
-    ""
+    "As they overcome challenges and complete adventures, characters earn Experience Points (XP), which are awarded by the Dungeon Master;  When a character's XP total "
+ || "crosses certain thresholds, the character's level increases.  The Dungeon Master's Guide provides guidance on awarding XP."
 ),
 ( --65
     "Expertise",
-    ""
+    "Expertise is a feature that enhances your use of a skill proficiency.  When you make an ability check with a skill proficiency in which you have Expertise, your "
+ || "Proficiency Bonus is doubled for that check unless that bonus is doubled by another feature." || CHAR(13) || CHAR(10) || CHAR(9) || "If you gain Expertise, you gain it "
+ || "in one skill in which you have proficiency.  You can't have Expertise in the same skill proficiency more than once."
 ),
 ( --66
     "Falling",
@@ -348,7 +371,8 @@ VALUES
 ),
 ( --67
     "Flying",
-    ""
+    "A variety of effects allow a creature to fly.  While flying, you fall if you have the Incapacitated or Prone condition or if your Fly Speed is reduced to 0.  You can "
+ || "stay aloft in those circumstances if you can hover."
 ),
 ( --68
     "Fly Speed",
