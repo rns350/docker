@@ -15,11 +15,14 @@ RUN touch ~/.sqliterc &&\
     sqlite3 core.db < data/enum/condition.sql &&\
     sqlite3 core.db < data/enum/damage_type.sql &&\
     sqlite3 core.db < data/enum/difficulty_class.sql &&\
+    sqlite3 core.db < data/enum/hazard.sql &&\
     sqlite3 core.db < data/enum/light.sql &&\
     sqlite3 core.db < data/enum/proficiency_bonus.sql &&\
     sqlite3 core.db < data/enum/special_sense.sql &&\
+    sqlite3 core.db < data/enum/speed_type.sql &&\
     sqlite3 core.db < data/enum/travel_pace.sql &&\
     sqlite3 core.db < data/creature/skill.sql &&\
+    sqlite3 core.db < data/creature/creature_type.sql &&\
     sqlite3 core.db < data/item/object/object_substance.sql &&\
     sqlite3 core.db < data/item/object/object_hit_points_by_size.sql &&\
     sqlite3 core.db < data/item/item.sql &&\

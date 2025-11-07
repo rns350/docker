@@ -1,7 +1,7 @@
 CREATE TABLE item (
     item_id INTEGER PRIMARY KEY AUTOINCREMENT,
     name VARCHAR(255) NOT NULL,
-    weight INTEGER,
+    weight REAL,
     description TEXT,
     cost INT NOT NULL
 );

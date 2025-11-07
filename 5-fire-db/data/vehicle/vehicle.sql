@@ -1,7 +1,7 @@
 CREATE TABLE vehicle(
     vehicle_id INTEGER PRIMARY KEY AUTOINCREMENT,
     name VARCHAR(255) NOT NULL,
-    weight INTEGER,
+    weight REAL,
     cost INTEGER
 );
 

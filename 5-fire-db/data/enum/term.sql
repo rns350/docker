@@ -119,23 +119,27 @@ VALUES
 ),
 ( --21
     "Burning",
-    ""
+    "A burning creature or object takes 1d4 Fire damage at the start of each of its turns.  As an action, you can extinguish fire on yourself by giving yourself the Prone "
+ || "condition and rolling on the ground.  The fire also goes out if it is doused, submerged, or suffocated."
 ),
 ( --22
     "Burrow Speed",
-    ""
+    "A creature that has a Burrow Speed can use that speed to move through sand, earth, mud, or ice.  The creature can't burrow through solid rock unless the creature has "
+ || "a trait that allows it to do so."
 ),
 ( --23
     "Campaign",
-    ""
+    "A Campaign is a series of Adventures."
 ),
 ( --24
     "Cantrip",
-    ""
+    "A cantrip is a level 0 spell, which is cast without a spell slot."
 ),
 ( --25
     "Carrying Capacity",
-    ""
+    "Your size and Strength score determine the maximum weight in pounds that you can caryy, as shown in the Carrying Capacity table.  The table also shows the "
+ || "maximum weight you can drag, lift, or push." || CHAR(13) || CHAR(10) || CHAR(9) || "While dragging, lifting, or pushing weight in excess of the maximum "
+ || "weight you can carry, your Speed can be no more than 5 feet."
 ),
 ( --26
     "Challenge Rating",
@@ -157,7 +161,7 @@ VALUES
 ),
 ( --30
     "Climb Speed",
-    ""
+    "A Climb Speed can be used in place of Speed to traverse a vertical surface without expending the extra movement normally associated with climbing."
 ),
 ( --31
     "Concentration",
@@ -255,7 +259,9 @@ VALUES
 ),
 ( --53
     "Dehydration",
-    ""
+    "A creature requires an ammount of water per day based on its size, as shown in the Water Needs per Day table.  A creature that drinks less than half the required water "
+ || "for a day gains 1 Exhaustion level at the day's end.  Exhaustion caused by dehydration can't be removed until the creature drinks the full amount of water required "
+ || "for a day."
 ),
 ( --54
     "Difficult Terrain",
@@ -314,7 +320,10 @@ VALUES
 ),
 ( --66
     "Falling",
-    ""
+    "A creature that falls takes 1d6 Bludgeoning damage at the end of the fall for every 10 feet it fell, to a maximum of 20d6.  When the creature lands, it has the Prone "
+ || "condition unless it avoids taking any damage from the fall." || CHAR(13) || CHAR(10) || CHAR(9) || "A creature that falls into water or another liquid can use its "
+ || "Reaction to make a DC 15 Strength (Athletics) or Dexterity (Acrobatics) check to hit the surface head or feet first.  On a successful check, any damage resulting "
+ || "from the fall is halved."
 ),
 ( --67
     "Flying",
@@ -322,7 +331,7 @@ VALUES
 ),
 ( --68
     "Fly Speed",
-    ""
+    "A Fly Speed can be used to travel through the air.  While you have a Fly Speed, you can stay aloft until you land, fall, or die."
 ),
 ( --69
     "Friendly",
@@ -346,7 +355,7 @@ VALUES
 ),
 ( --73
     "Hazard",
-    ""
+    "A hazard is an environmental danger."
 ),
 ( --74
     "Healing",
@@ -477,7 +486,10 @@ VALUES
 ),
 ( --100
     "Malnutrition",
-    ""
+    "A creature needs an amount of food per day based on its size, as shown in the Food Needs per Day table.  A creature that eats but consumes less than half the "
+ || "required food for a day must succeed on a DC 10 Constitution saving throw or gain 1 Exhaustion level at the day's end.  A creature that eats nothing for 5 days "
+ || "automatically gains 1 Exhaustion level at the end of the fifth day as well as an additional level at the end of each subsequent day without food."
+ || CHAR(13) || CHAR(10) || CHAR(9) || "Exhaustion caused by malnutrition can't be removed until the creature eats the full amount of food required for a day."
 ),
 ( --101
     "Monster",
@@ -614,7 +626,14 @@ VALUES
 ),
 ( --129
     "Speed",
-    ""
+    "A creature has a Speed, which is the distance in feet the creature can cover when it moves on its turn." || CHAR(13) || CHAR(10) || CHAR(9) || "Special Speeds: "
+ || CHAR(13) || CHAR(10) || CHAR(9) || "Some creatures have special speeds, such as a Burrow Speed, Climb Speed, Fly Speed, or Swim Speed.  If you have more than one "
+ || "speed, choose which one to use when you move; you can switch between the speeds during your move.  Whenever you switch, subtract the distance already traveled "
+ || "from the new speed.  The result determines how much further you can move.  If the result is 0 or less, you can't use the new speed during the current move.  "
+ || "For example, if you have a Speed of 30 and a Fly Speed of 40, you could fly 10 feet, walk 10 feet, and leap into the air to fly 20 feet more."
+ || CHAR(13) || CHAR(10) || CHAR(9) || "Changes to Your Speeds: If an effect increases or decreases your Speed for a time, any special speed you have increases or "
+ || "decreases by an equal ammount for the same duration.  For example, if your Speed is reduced to 0 and you have a Climb Speed, your Climb Speed is also reduced to 0.  "
+ || "Similarly, if your Speed is halved and you have a Fly Speed, your Fly Speed is also halved."
 ),
 ( --130
     "Spell",
@@ -653,7 +672,9 @@ VALUES
 ),
 ( --138
     "Suffocation",
-    ""
+    "A creature can hold its breath for a number of minutes equal to 1 plus its Constitution modifier (minimum of 30 seconds) before suffocation begins.  When a creature runs "
+ || "out of breath or is choking, it gains 1 Exhaustion level at the end of each of its turns.  When a creature can breathe again, it removes all levels of Exhaustion it "
+ || "gained from suffocating."
 ),
 ( --139
     "Surprise",
@@ -665,7 +686,7 @@ VALUES
 ),
 ( --141
     "Swim Speed",
-    ""
+    "A Swim Speed can be used to swim without expending the extra movement normally associated with swimming."
 ),
 ( --142
     "Target",
