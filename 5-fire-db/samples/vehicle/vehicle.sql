@@ -18,4 +18,4 @@ SELECT
     vehicle.weight,
     vehicle.cost
 FROM tack_harness_and_drawn_vehicle
-JOIN vehicle ON tack_harness_and_drawn_vehicle.vehicle_id = vehicle.vehicle_id
+JOIN vehicle ON tack_harness_and_drawn_vehicle.vehicle_id = vehicle.vehicle_id;
