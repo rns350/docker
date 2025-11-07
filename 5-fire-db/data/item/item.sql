@@ -8,9 +8,10 @@ CREATE TABLE item (
 
 INSERT INTO item (name, weight, description, cost)
 VALUES
-----------------------------
---- PHB Adventuring Gear ---
-----------------------------
+-----------------
+--- PHB Items ---
+-----------------
+
 ( --1
     "Acid",
     1,

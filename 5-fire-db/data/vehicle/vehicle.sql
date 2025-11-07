@@ -7,6 +7,10 @@ CREATE TABLE vehicle(
 
 INSERT INTO vehicle(name, weight, cost)
 VALUES
+--------------------
+--- PHB Vehicles ---
+--------------------
+
 --1
 ("Carriage", 600, 10000),
 --2

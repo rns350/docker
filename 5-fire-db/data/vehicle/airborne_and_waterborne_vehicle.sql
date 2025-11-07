@@ -14,6 +14,10 @@ CREATE TABLE airborne_and_waterborne_vehicle(
 
 INSERT INTO airborne_and_waterborne_vehicle(vehicle_id, speed, crew, passengers, cargo, armor_class, hit_points, damage_threshold)
 VALUES
+--------------------------------------------
+--- PHB Airborne and Waterborne Vehicles ---
+--------------------------------------------
+
 --1 Airship
 (9, 8, 10, 20, 1, 13, 300, NULL),
 --2 Galley

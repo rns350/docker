@@ -7,6 +7,10 @@ CREATE TABLE tack_harness_and_drawn_vehicle(
 
 INSERT INTO tack_harness_and_drawn_vehicle (vehicle_id)
 VALUES
+-----------------------------------
+--- PHB Tack and Drawn Vehicles ---
+-----------------------------------
+
 --1 Carriage
 (1),
 --2 Cart
