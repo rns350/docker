@@ -6,21 +6,24 @@ COPY data data
 RUN touch ~/.sqliterc &&\
     echo -e ".headers on\n.mode column" >> ~/.sqliterc &&\
     touch core.db &&\
-    sqlite3 core.db < data/ability_score.sql &&\
-    sqlite3 core.db < data/item.sql &&\
-    sqlite3 core.db < data/armor_category.sql &&\
-    sqlite3 core.db < data/armor_archetype.sql &&\
-    sqlite3 core.db < data/damage_type.sql &&\
-    sqlite3 core.db < data/weapon_category.sql &&\
-    sqlite3 core.db < data/weapon_classification.sql &&\
-    sqlite3 core.db < data/weapon_mastery.sql &&\
-    sqlite3 core.db < data/weapon_property.sql &&\
-    sqlite3 core.db < data/weapon_archetype.sql &&\
-    sqlite3 core.db < data/adventuring_gear.sql &&\
-    sqlite3 core.db < data/storage.sql &&\
-    sqlite3 core.db < data/ammunition.sql &&\
-    sqlite3 core.db < data/tool.sql &&\
-    sqlite3 core.db < data/condition.sql &&\
-    sqlite3 core.db < data/action_type.sql
+    sqlite3 core.db < data/enum/ability_score.sql &&\
+    sqlite3 core.db < data/enum/action_type.sql &&\
+    sqlite3 core.db < data/enum/condition.sql &&\
+    sqlite3 core.db < data/enum/damage_type.sql &&\
+    sqlite3 core.db < data/item/item.sql &&\
+    sqlite3 core.db < data/item/adventuring_gear.sql &&\
+    sqlite3 core.db < data/item/ammunition.sql &&\
+    sqlite3 core.db < data/item/storage.sql &&\
+    sqlite3 core.db < data/item/tool.sql &&\
+    sqlite3 core.db < data/item/armor/armor_category.sql &&\
+    sqlite3 core.db < data/item/armor/armor_archetype.sql &&\
+    sqlite3 core.db < data/item/weapon/weapon_category.sql &&\
+    sqlite3 core.db < data/item/weapon/weapon_classification.sql &&\
+    sqlite3 core.db < data/item/weapon/weapon_mastery.sql &&\
+    sqlite3 core.db < data/item/weapon/weapon_property.sql &&\
+    sqlite3 core.db < data/item/weapon/weapon_archetype.sql &&\
+    sqlite3 core.db < data/vehicle/vehicle.sql &&\
+    sqlite3 core.db < data/vehicle/airborne_and_waterborne_vehicle.sql &&\
+    sqlite3 core.db < data/vehicle/tack_harness_and_drawn_vehicle.sql
 
 CMD ["/usr/bin/sqlite3", "core.db"]

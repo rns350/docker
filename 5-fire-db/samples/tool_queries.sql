@@ -7,5 +7,5 @@ SELECT
     tool.has_variants,
     item.cost
 FROM tool
-JOIN ability_score ON tool.ability_score_id = ability_score.ability_score_id;
+JOIN ability_score ON tool.ability_score_id = ability_score.ability_score_id
 JOIN item ON tool.item_id = item.item_id;

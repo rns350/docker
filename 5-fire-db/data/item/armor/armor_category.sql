@@ -7,6 +7,10 @@ CREATE TABLE armor_category (
 
 INSERT INTO armor_category (name, time_on, time_off)
 VALUES
+----------------------------
+--- PHB Armor Categories ---
+----------------------------
+
 --1
 ("Light", 60, 60),
 --2
