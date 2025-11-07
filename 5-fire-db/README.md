@@ -1,2 +1,1 @@
 docker run --rm -it -w /workspace umbra23/5-fire-db
-.open core.db

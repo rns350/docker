@@ -50,11 +50,13 @@ VALUES
 ),
 ( --9
     "Armor Class",
-    ""
+    "An Armor Class (AC) is the target number for an attack roll.  AC represents how difficult it is to hit a target." || CHAR(13) || CHAR(10) || CHAR(9) || "Your base AC "
+ || "calculation is 10 plus your Dexterity modifier.  If a rule gives you another base AC calculation, you choose which calculation to use; you can't use more than one."
 ),
 ( --10
     "Armor Training",
-    ""
+    "Armor Training allows you to use armor of a certain category without the following drawbacks.  If you wear Light, Medium, or Heavy armor and lack training with it, you "
+ || "have Disadvantage on any D20 Test that involves Strength or Dexterity, and you can't cast spells.  If you use a Shield and lack training with it, you don't gain its AC bonus."
 ),
 ( --11
     "Attack",
@@ -67,15 +69,16 @@ VALUES
 ),
 ( --12
     "Attack Roll",
-    ""
+    "An attack roll is a D20 Test that represents making an attack with a weapon, an Unarmed Strike, or a spell."
 ),
 ( --13
     "Attitude",
-    ""
+    "A monster has a starting attitude toward a player character: Friendly, Hostile, or Indifferent."
 ),
 ( --14
     "Attunement",
-    ""
+    "Some magic items require a creature to form a bond - called Attunement - with them before the creature can use an item's magical properties.  A creature can "
+ || "have Attunement with no more than three magic items at a time."
 ),
 ( --15
     "Blinded",
@@ -85,23 +88,34 @@ VALUES
 ),
 ( --16
     "Blindsight",
-    ""
+    "If you have Blindsight, you can see within a specific range without relying on physical sight.  Within that range, you can see anything that isn't behind Total Cover "
+ || "even if you have the Blinded condition or are in Darkness.  Moreover, in that range, you can see something that has the Invisible condition."
 ),
 ( --17
     "Bloodied",
-    ""
+    "A creature is Bloodied when it has half its Hit Points or fewer remaining."
 ),
 ( --18
     "Bonus Action",
-    ""
+    "A Bonus Action is a special action that you can take on the same turn that you take an action.  You can't take more than one Bonus Action on a turn, and you have "
+ || "a Bonus Action to take only if a rule explicitly says so."
 ),
 ( --19
     "Breaking Objects",
-    ""
+    "Objects can be harmed by attacks and by some spells, using the rules below.  If an object is exceedingly fragile, the DM may allow a creature to break it automatically "
+ || "with the Attack or Utilize action." || CHAR(13) || CHAR(10) || CHAR(9) || "Armor Class: The Object Armor Class table suggests ACs for various substances."
+ || CHAR(13) || CHAR(10) || CHAR(9) || "Hit Points: An object is destroyed when it has 0 Hit Points.  The Object Hit Points table suggests Hit Points for fragile and resilient "
+ || "objects that are Large or smaller.  To track Hit Points for a Huge or Gargantuan object, divide it into Large or smaller sections, and track each section's Hit Points "
+ || "separately.  The DM determines whether destroying a part of an object causes the whole thing to collapse." || CHAR(13) || CHAR(10) || CHAR(9) || "Damage Types and "
+ || "Objects: Objects have Immunity to Poison and Psychic damage.  The DM might decide that some damage types are more or less effective against an object.  For example, "
+ || "Bludgeoning damage works well for smashing things but not for cuttin.  Paper or cloth objects might have Vulnerability to Fire damage." || CHAR(13) || CHAR(10) || CHAR(9)
+ || "Damage Threshold: Big objects, such as castle walls, often have extra resilience represented by a damage threshold." || CHAR(13) || CHAR(10) || CHAR(9) || "No Ability "
+ || "Scores: An Object lacks ability scores unless a rule assigns scores to the object.  Without ability scores, an object can't make ability checks, and it fails all saving throws."
 ),
 ( --20
     "Bright Light",
-    ""
+    "Bright Light lets most creatures see normally.  Even gloomy days provide Bright Light, as do torches, lanterns, fires, and other sources of illumination within a "
+ || "specific radius."
 ),
 ( --21
     "Burning",
@@ -211,11 +225,13 @@ VALUES
 ),
 ( --47
     "Darkness",
-    ""
+    "Darkness creates a Heavily Obscured area.  Characters face Darkness outdoors at night (even most moonlit nights), within the confines of an unlit dungeon, "
+ || "or in an area of magical Darkness."
 ),
 ( --48
     "Darkvision",
-    ""
+    "If you have Darkvision, you can see in Dim Light within a specified range as if it were Bright Light and in Darkness within that range as if it were Dim Light.  "
+ || "You discern colors in that Darkness only as shades of gray."
 ),
 ( --49
     "Dash",
@@ -251,7 +267,8 @@ VALUES
 ),
 ( --56
     "Dim Light",
-    ""
+    "Dim Light, also called shadows, creates a Lightly Obscured area.  An area of Dim Light is usually a boundary between Bright Light and surrounding Darkness.  "
+ || "The soft light of twilight and dawn also counts as Dim Light.  A full moon might bathe the land in Dim Light."
 ),
 ( --57
     "Disadvantage",
@@ -309,7 +326,7 @@ VALUES
 ),
 ( --69
     "Friendly",
-    ""
+    "A Friendly creature views you favorably.  You have advantage on ability checks to influence a Friendly creature."
 ),
 ( --70
     "Frightened",
@@ -373,7 +390,7 @@ VALUES
 ),
 ( --82
     "Hostile",
-    ""
+    "A Hostile creature views you unfavorably.  You have Disadvantage on an ability check to influence a Hostile creature."
 ),
 ( --83
     "Hover",
@@ -399,7 +416,7 @@ VALUES
 ),
 ( --88
     "Indifferent",
-    ""
+    "An Indifferent creature has no desire to help or hinder you.  Indifferent is the default attitude of a monster."
 ),
 ( --89
     "Influence",
@@ -668,11 +685,17 @@ VALUES
 ),
 ( --146
     "Tremorsense",
-    ""
+    "A creature with Tremorsense can pinpoint the location of cratures and moving objects within a specific range, provided that the creature with Tremorsense and "
+ || "anything it is detecting are both in contact with the same surface (such as the ground, a wall, or a ceiling) or the same liquid." || CHAR(13) || CHAR(10) || CHAR(9)
+ || "Tremorsense can't detect creatures or objects in the air, and it doesn't count as a form of sight."
 ),
 ( --147
     "Truesight",
-    ""
+    "If you have Truesight, your vision is enhanced within a specified range.  Within that range, your vision pierces through the following:" || CHAR(13) || CHAR(10) || CHAR(9)
+ || "Darkness: You can see in normal and magical darkness." || CHAR(13) || CHAR(10) || CHAR(9) || "Invisibility: You see creatures and objects that have the Invisible Condition."
+ || CHAR(13) || CHAR(10) || CHAR(9) || "Visual Illusions: Visual illusions appear transparent to you, and you automatically succeed on saving throws against them."
+ || CHAR(13) || CHAR(10) || CHAR(9) || "Transformations: You discern the true form of any creature or object you see that has been transformed by magic."
+ || CHAR(13) || CHAR(10) || CHAR(9) || "Ethereal Plane: You see into the Etheral Plane."
 ),
 ( --148
     "Unarmed Strike",

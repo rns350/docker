@@ -1,15 +1,16 @@
 CREATE TABLE tool (
     tool_id INTEGER PRIMARY KEY AUTOINCREMENT,
     item_id INTEGER NOT NULL,
-    ability_score_id INTEGER NOT NULL,
+    ability_id INTEGER NOT NULL,
     utilize TEXT NOT NULL,
     craft TEXT,
     has_variants BOOLEAN NOT NULL,
     
     FOREIGN KEY (item_id) REFERENCES item(item_id)
+    FOREIGN KEY (ability_id) REFERENCES ability(ability_id)
 );
 
-INSERT INTO tool (item_id, ability_score_id, utilize, craft, has_variants)
+INSERT INTO tool (item_id, ability_id, utilize, craft, has_variants)
 VALUES
 -----------------
 --- PHB Tools ---
