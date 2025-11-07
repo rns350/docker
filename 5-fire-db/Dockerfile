@@ -1,0 +1,45 @@
+FROM umbra23/sqlite3:3.50.4
+
+WORKDIR /workspace
+
+COPY data data
+RUN touch ~/.sqliterc &&\
+    echo -e ".headers on\n.mode column" >> ~/.sqliterc &&\
+    touch core.db &&\
+    sqlite3 core.db < data/enum/term.sql &&\
+    sqlite3 core.db < data/enum/size.sql &&\
+    sqlite3 core.db < data/enum/ability_modifier.sql &&\
+    sqlite3 core.db < data/enum/ability.sql &&\
+    sqlite3 core.db < data/enum/area_of_effect.sql &&\
+    sqlite3 core.db < data/enum/action_type.sql &&\
+    sqlite3 core.db < data/enum/attitude.sql &&\
+    sqlite3 core.db < data/enum/condition.sql &&\
+    sqlite3 core.db < data/enum/damage_type.sql &&\
+    sqlite3 core.db < data/enum/difficulty_class.sql &&\
+    sqlite3 core.db < data/enum/hazard.sql &&\
+    sqlite3 core.db < data/enum/light.sql &&\
+    sqlite3 core.db < data/enum/proficiency_bonus.sql &&\
+    sqlite3 core.db < data/enum/special_sense.sql &&\
+    sqlite3 core.db < data/enum/speed_type.sql &&\
+    sqlite3 core.db < data/enum/travel_pace.sql &&\
+    sqlite3 core.db < data/creature/skill.sql &&\
+    sqlite3 core.db < data/creature/creature_type.sql &&\
+    sqlite3 core.db < data/item/object/object_substance.sql &&\
+    sqlite3 core.db < data/item/object/object_hit_points_by_size.sql &&\
+    sqlite3 core.db < data/item/item.sql &&\
+    sqlite3 core.db < data/item/adventuring_gear.sql &&\
+    sqlite3 core.db < data/item/ammunition.sql &&\
+    sqlite3 core.db < data/item/storage.sql &&\
+    sqlite3 core.db < data/item/tool.sql &&\
+    sqlite3 core.db < data/item/armor/armor_category.sql &&\
+    sqlite3 core.db < data/item/armor/armor_archetype.sql &&\
+    sqlite3 core.db < data/item/weapon/weapon_category.sql &&\
+    sqlite3 core.db < data/item/weapon/weapon_classification.sql &&\
+    sqlite3 core.db < data/item/weapon/weapon_mastery.sql &&\
+    sqlite3 core.db < data/item/weapon/weapon_property.sql &&\
+    sqlite3 core.db < data/item/weapon/weapon_archetype.sql &&\
+    sqlite3 core.db < data/vehicle/vehicle.sql &&\
+    sqlite3 core.db < data/vehicle/airborne_and_waterborne_vehicle.sql &&\
+    sqlite3 core.db < data/vehicle/tack_harness_and_drawn_vehicle.sql
+
+CMD ["/usr/bin/sqlite3", "core.db"]

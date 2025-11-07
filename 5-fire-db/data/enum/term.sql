@@ -396,7 +396,14 @@ VALUES
 ),
 ( --72
     "Grappling",
-    ""
+    "A creature can grapple another creature.  Characters typically grapple by using an Unarmed Strike.  Many monsters have special attacks that allow them to quickly "
+ || "grapple prey.  However a grapple is initiated, it follows these rules." || CHAR(13) || CHAR(10) || CHAR(9) || "Grappled Condition: Successfully grappling a creature "
+ || "gives it the Grappled condition." || CHAR(13) || CHAR(10) || CHAR(9) || "One Grapple per Hand: A creature must have a hand free to grapple another creature.  Some stat "
+ || "blocks and game effects allow a creature to grapple using a tentacle, a maw, or another body part.  Whatever part a grappler uses, it can grapple only one creature at a "
+ || "time with that part, and the grappler can't use that part to target another creature unless it ends the grapple." || CHAR(13) || CHAR(10) || CHAR(9) || "Escaping a "
+ || "Grapple: A Grappled creature can use its action to make a Strength (Athletics) or Dexterity (Acrobatics) check against the grapple's escape DC, ending the condition on "
+ || "itself on a success.  The condition also ends if the grappler has the Incapacitated condition or if the distance between the Grappled target and the grappler exceeds "
+ || "the grapple's range."
 ),
 ( --73
     "Hazard",
@@ -404,11 +411,11 @@ VALUES
 ),
 ( --74
     "Healing",
-    ""
+    "Healing is how you regain Hit Points."
 ),
 ( --75
     "Heavily Obscured",
-    ""
+    "You have the Blinded condition while trying to see something in a Heavily Obscured space."
 ),
 ( --76
     "Help",
@@ -420,7 +427,8 @@ VALUES
 ),
 ( --77
     "Heroic Inspiration",
-    ""
+    "If you (a player character) have Heroic Inspiration, you can expend it to reroll any die immediately after rolling it, and you must use the new roll. "
+ || CHAR(13) || CHAR(10) || CHAR(9) || "If you gain Heroic Inspiration but already have it, it's lost unless you give it to a player character who lacks it."
 ),
 ( --78
     "Hide",
@@ -432,15 +440,20 @@ VALUES
 ),
 ( --79
     "High Jump",
-    ""
+    "When you make a High Jump, you leap into the air a number of feet equal to 3 plus your Strength modifier (minimum of 0 feet) if you move at least 10 feet on foot "
+ || "immediately before the jump.  When you make a standing High Jump, you can jump only half that distance.  Either way, each foot of the jump costs a foot of movement."
+ || CHAR(13) || CHAR(10) || CHAR(9) || "You can extend your arms half your height above yourself during the jump.  Thus, you can reach a distance equal to the heigh of the "
+ || "jump plus 1.5 times your height."
 ),
 ( --80
     "Hit Point Dice",
-    ""
+    "Hit Point Dice, or Hit Dice for short, help determine a player character's Hit Point maximum.  Most monsters also have Hit Dice.  A creature can spend Hit Dice during "
+ || "a Short Rest to regain Hit Points."
 ),
 ( --81
     "Hit Points",
-    ""
+    "Hit Points (HP) are a measure of how difficult it is to kill or destroy a creature or an object.  Damage reduces Hit Points, and healing restores them.  You can't have "
+ || "more Hit Points than your Hit Point maximum, and you can't have less than 0."
 ),
 ( --82
     "Hostile",
@@ -448,7 +461,8 @@ VALUES
 ),
 ( --83
     "Hover",
-    ""
+    "Some creatures can hover, as noted in their stat blocks, and some spells and other effects grant the ability to hvoer.  Hovering while flying prevents you from falling "
+ || "in certain circumstances."
 ),
 ( --84
     "Illusions",
