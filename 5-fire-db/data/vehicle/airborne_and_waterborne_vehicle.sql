@@ -6,13 +6,13 @@ CREATE TABLE airborne_and_waterborne_vehicle(
     passengers INTEGER,
     cargo INTEGER,
     armor_class INTEGER NOT NULL,
-    health_points INTEGER NOT NULL,
+    hit_points INTEGER NOT NULL,
     damage_threshold INTEGER,
 
     FOREIGN KEY (vehicle_id) REFERENCES vehicle(vehicle_id)
 );
 
-INSERT INTO airborne_and_waterborne_vehicle(vehicle_id, speed, crew, passengers, cargo, armor_class, health_points, damage_threshold)
+INSERT INTO airborne_and_waterborne_vehicle(vehicle_id, speed, crew, passengers, cargo, armor_class, hit_points, damage_threshold)
 VALUES
 --1 Airship
 (9, 8, 10, 20, 1, 13, 300, NULL),

@@ -6,6 +6,7 @@ COPY data data
 RUN touch ~/.sqliterc &&\
     echo -e ".headers on\n.mode column" >> ~/.sqliterc &&\
     touch core.db &&\
+    sqlite3 core.db < data/enum/term.sql &&\
     sqlite3 core.db < data/enum/ability_score.sql &&\
     sqlite3 core.db < data/enum/action_type.sql &&\
     sqlite3 core.db < data/enum/condition.sql &&\

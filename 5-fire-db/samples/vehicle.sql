@@ -6,7 +6,7 @@ SELECT
     airborne_and_waterborne_vehicle.passengers,
     airborne_and_waterborne_vehicle.cargo,
     airborne_and_waterborne_vehicle.armor_class,
-    airborne_and_waterborne_vehicle.health_points,
+    airborne_and_waterborne_vehicle.hit_points,
     airborne_and_waterborne_vehicle.damage_threshold,
     vehicle.cost
 from airborne_and_waterborne_vehicle
