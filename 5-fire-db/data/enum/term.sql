@@ -684,19 +684,23 @@ VALUES
 ),
 ( --119
     "Ritual",
-    ""
+    "If you have a spell prepared that has the Ritual tag, you can cast that spell as a Ritual.  The Ritual version of a spell takes 10 minutes longer to cast than normal.  "
+ || "It also doesn't expend a spell slot, which means the ritual version of a spell can't be cast at a higher level."
 ),
 ( --120
     "Round Down",
-    ""
+    "Whenever you divide or multiply a number in the game, round down if you end up with a fraction, even if the fraction is one half or greater.  Some rules make an "
+ || "exception and tell you to round up."
 ),
 ( --121
     "Save",
-    ""
+    "Save is another name for a Saving Throw"
 ),
 ( --122
     "Saving Throw",
-    ""
+    "A Saving Throw - also called a save - represents an attempt to avoid or resist a threat.  You normally make a saving throw only when a rule requires you to do so, but "
+ || "you can decide to fail the save without rolling.  The result of a save is detailed in the effect that allowed it.  If a target is forced to make a save and lacks the "
+ || "ability score used by it, the target automatically fails."
 ),
 ( --123
     "Search",
@@ -705,28 +709,40 @@ VALUES
 ),
 ( --124
     "Shape-Shifting",
-    ""
+    "If an effect, such as Wild Shape or the Polymorph spell, lets you shape-shift, its description specifies what happens to you.  Unless that description says otherwise, "
+ || "any ongoing effects on you - conditions, spells, curses, and the like - carry over from one form to the other.  You revert to your true form if you die."
 ),
 ( --125
     "Short Rest",
-    ""
+    "A Short Rest is a 1-hour period of downtime, during which a creature does nothing more strenuous than reading, talking, eating, or standing watch.  To start a Short "
+ || "Rest, you must have at least 1 Hit Point." || CHAR(13) || CHAR(10) || CHAR(9) || "Benefits of the Rest: When you finish the rest, you gain the following benefits:"
+ || CHAR(13) || CHAR(10) || CHAR(13) || CHAR(10) || CHAR(9) || "Spend Hit Point Dice: You can spend one or more of your Hit Point Dice to regain Hit Points.  For each "
+ || "Hit Point Die you spend in this way, roll the die and add your Constitution modifier to it.  You regain Hit Points equal to the total (minimum of 1 Hit Point).  You "
+ || "can decide to spend an additional Hit Point Die after each roll." || CHAR(13) || CHAR(10) || CHAR(9) || "Special Feature: Some features are recharged by a Short "
+ || "Rest.  If you have such a feature, it recharges in the way specified in its description."  || CHAR(13) || CHAR(10) || CHAR(13) || CHAR(10) || CHAR(9)
+ || "Interrupting the Rest: A Short Rest is stopped by the following interruptions:" || CHAR(13) || CHAR(10) || CHAR(9) || "- Rolling Initiative" || CHAR(13) || CHAR(10) || CHAR(9)
+ || "- casting a spell other than a cantrip." || CHAR(13) || CHAR(10) || CHAR(9) || "- Taking any damage" || CHAR(13) || CHAR(10) || CHAR(13) || CHAR(10) || CHAR(9) 
+ || "An interrupted Short Rest confers no benefits."
 ),
 ( --126
     "Simultaneous Effects",
-    ""
+    "If two or more things happen at the same time on a turn, the person at the game table - player or DM - whose turn it is decides the order in which those things happen.  "
+ || "For example, if two effects occur at the start of a player character's turn, the player decides which of the effects happens first."
 ),
 ( --127
     "Size",
-    ""
+    "A creature or an object belongs to a size category: Tiny, Small, Medium, Large, Huge, or Gargantuan.  A creature's size determines how much space the creature "
+ || "occupies in combat.  An object's size affects its Hit Points."
 ),
 ( --128
     "Skill",
-    ""
+    "A skill is an area of specialization associated with an ability check.  If you have proficiency in a skill, you can add your Proficiency Bonus when you make an ability "
+ || "check associated with that skill."
 ),
 ( --129
     "Speed",
     "A creature has a Speed, which is the distance in feet the creature can cover when it moves on its turn." || CHAR(13) || CHAR(10) || CHAR(9) || "Special Speeds: "
- || CHAR(13) || CHAR(10) || CHAR(9) || "Some creatures have special speeds, such as a Burrow Speed, Climb Speed, Fly Speed, or Swim Speed.  If you have more than one "
+ || "Some creatures have special speeds, such as a Burrow Speed, Climb Speed, Fly Speed, or Swim Speed.  If you have more than one "
  || "speed, choose which one to use when you move; you can switch between the speeds during your move.  Whenever you switch, subtract the distance already traveled "
  || "from the new speed.  The result determines how much further you can move.  If the result is 0 or less, you can't use the new speed during the current move.  "
  || "For example, if you have a Speed of 30 and a Fly Speed of 40, you could fly 10 feet, walk 10 feet, and leap into the air to fly 20 feet more."
@@ -736,15 +752,16 @@ VALUES
 ),
 ( --130
     "Spell",
-    ""
+    "A spell is a magical effect that has the characteristics described in chapter 7 of the Player's Handbook."
 ),
 ( --131
     "Spell Attack",
-    ""
+    "A spell attack is an attack roll made as part of a spell or another magical effect."
 ),
 ( --132
     "Spellcasting Focus",
-    ""
+    "A Spellcasting Focus is an object that certain creatures can use in place of a spell's Materical components if those materials aren't consumed by the spell and don't "
+ || "have a cost specified.  Some classes allow its members to use certain types of Spellcasting Focuses."
 ),
 ( --133
     "Sphere",
@@ -753,11 +770,34 @@ VALUES
 ),
 ( --134
     "Stable",
-    ""
+    "A creature is Stable if it has 0 Hit Points but isn't required to make Death Saving Throws."
 ),
 ( --135
     "Stat Block",
-    ""
+    "A state block contains the game statistics of a monster.  Each stat block includes the following information presented after the monster's name."
+ || CHAR(13) || CHAR(10) || CHAR(9) || "Size: A monster is Tiny, Small, Medium, Large, Huge, or Gargantuan." || CHAR(13) || CHAR(10) || CHAR(9) || "Creature Type: "
+ || "This entry notes the family of beings a monster belongs to, along with any descriptive tags." || CHAR(13) || CHAR(10) || CHAR(9) || "Alignment: An alignment is "
+ || "suggested for the monster, with the DM determining its actual alignment." || CHAR(13) || CHAR(10) || CHAR(9) || "AC, Initiative, and HP: These entries give the "
+ || "monster's Armor Class, Initiative, and Hit Points, which are detailed in chapter 1.  In parenthesis after the Hit Points, the monster's Hit Point Dice are provided, "
+ || "along with the contribution of its Constitution, if any, to its Hit Points.  Following the Initiative modifier is an Initiative score.  Some creatures that are created "
+ || "by magic lack Hit Dice and Initiative information." || CHAR(13) || CHAR(10) || CHAR(9) || "Speed: Here the monster's Speed is provided, along with any special speeds."
+ || CHAR(13) || CHAR(10) || CHAR(9) || "Ability Scores: A table provides the monster's ability scores, modifiers, and saving throw modifiers." || CHAR(13) || CHAR(10) || CHAR(9)
+ || "Skills: This entry lists the monster's skill proficiencies, if any." || CHAR(13) || CHAR(10) || CHAR(9) || "Resistances and Vulnerabilities: These entries list the "
+ || "monster's Resistances and Vulnerabilities, if any." || CHAR(13) || CHAR(10) || CHAR(9) || "Immunities: This section lists the monster's damage and condition Immunities, "
+ || "if any." || CHAR(13) || CHAR(10) || CHAR(9) || "Gear: If the monster has any equipment that can be given away or retrieved, it's listed in this entry."
+ || CHAR(13) || CHAR(10) || CHAR(9) || "Senses: This entry lists the monster's special senses, such as Darkvision, and its Passive Perception." || CHAR(13) || CHAR(10) || CHAR(9)
+ || "Languages: This entry lists any languages the monster knows." || CHAR(13) || CHAR(10) || CHAR(9) || "CR: Challenge Rating summarizes the threat a monster poses and "
+ || "is defined in the Monster Manual.  The Experience Points characters receive for defeating a monster and its Proficiency Bonus follow.  Some creatures that are created by "
+ || "magic have no CR." || CHAR(13) || CHAR(10) || CHAR(9) || "Traits: The monster's traits, if any, are features that are active at all times or in certain situations."
+ || CHAR(13) || CHAR(10) || CHAR(9) || "Actions: The monster can take these actions in addition to those detailed in the glossary." || CHAR(13) || CHAR(10) || CHAR(9)
+ || "Bonus Actions: If the monster has Bonus Action options, they are listed in this section." || CHAR(13) || CHAR(10) || CHAR(9) || "Reactions: If the monster can take "
+ || "special Reactions, those are listed in this section." || CHAR(13) || CHAR(10) || CHAR(9) || "Attack Notation: The entry for a monster's attack starts by identifying "
+ || "whether the attack is a melee or a ranged attack and then provides the attack roll's bonus, its reach or range, and what happens on a hit.  An attack is against one "
+ || "target unless its entry says otherwise." || CHAR(13) || CHAR(10) || CHAR(9) || "Saving Throw Effect Notation: If an effect forces a saving throw, the effect's entry "
+ || "starts by identifying the kind of saving throw required and then provides the save's DC, a description of which creatures must make the save, and what happens on a "
+ || "failed or a successful save." || CHAR(13) || CHAR(10) || CHAR(9) || "Damage Notation: A stat block usually provides both a static number and a die expression for each "
+ || "instance of damage.  For example, an attack might deal 4 (1d4 + 2) damage on a hit.  The DM determines whether you use the static number or the die expression in "
+ || "parenthesis; you don't use both."
 ),
 ( --136
     "Study",
@@ -778,11 +818,12 @@ VALUES
 ),
 ( --139
     "Surprise",
-    ""
+    "If a creature is caught unawares by the start of combat, that creature is surprised.  which causes it to have Disadvantage on its Initiative roll."
 ),
 ( --140
     "Swimming",
-    ""
+    "While you're swimming, each foot of movement costs 1 extra foot (2 extra feet in Difficult Terrain).  You ignore this extra cost if you have a Swim Speed and use it to "
+ || "swim.  At the DM's option, moving any distance in rough water might require a DC 15 Strength (Athletics) check."
 ),
 ( --141
     "Swim Speed",
@@ -790,19 +831,32 @@ VALUES
 ),
 ( --142
     "Target",
-    ""
+    "A target is the creature or object targeted by an attack roll, forced to make a saving throw by an effect, or selected to receive the effects of a spell or another "
+ || "phenomenon."
 ),
 ( --143
     "Telepathy",
-    ""
+    "Telepathy is a magical ability that allows a creature to communicate mentally with anohter creature within a specified range.  Unless a rule states otherwise, the "
+ || "contacted creature doesn't need to share a language with the telepath to understand this communication, but the contacted creature must be able to understand at "
+ || "least one language or be telepathic itself to understand." || CHAR(13) || CHAR(10) || CHAR(9) || "A telepath doesn't need to see a contacted creature, and the telepath "
+ || "can start or end the telepathic communication at any time (no action required).  Telepathic contact can't be initiated and is immediately broken if either the "
+ || "telepath or the other creature has the Incapacitated condition.  Telepathic contact is also broken if the contacted creature is no longer within the telepathy's range "
+ || "or if the telepath contacts a different creature within range." || CHAR(13) || CHAR(10) || CHAR(9) || "A creature without telepathy can receive telepathic messages "
+ || "but can't initiate a telepathic conversation.  Once a telepathic conversation starts, the non-telepath can communicate mentally to the telepath until the telepath "
+ || "ends the connection."
 ),
 ( --144
     "Teleportation",
-    ""
+    "Teleportation is a special kind of magical transportation.  If you teleport, you disappear and reappear elsewhere instantly, without moving through the intervening "
+ || "space.  This transportation doesn't expend movement unless a rule tells you otherwise, and teleportation never provokes Opportunity Attacks."
+ || CHAR(13) || CHAR(10) || CHAR(9) || "When you teleport, all the equipment you're wearing and carrying teleports with you.  If you're touching another creature when you "
+ || "teleport, that creature doesn't teleport with you unless the teleportation effect says otherwise." || CHAR(13) || CHAR(10) || CHAR(9) || "If the destination space of "
+ || "your teleportation is occupied by another creature or blocked by a solid obstacle, you instead appear in the nearest unoccupied space of your choice."
+ || CHAR(13) || CHAR(10) || CHAR(9) || "The description of a teleportation effect tells you if you must see the teleportation's destination."
 ),
 ( --145
     "Temporary Hit Points",
-    ""
+    "Temporary Hit Points are granted by certain effects and act as a buffer against losing real Hit Points."
 ),
 ( --146
     "Tremorsense",
@@ -820,7 +874,15 @@ VALUES
 ),
 ( --148
     "Unarmed Strike",
-    ""
+    "Instead of using a weapon to make a melee attack, you can use a punch, kick, head-butt, or similar forceful blow.  In game terms, this is an Unarmed Strike - a melee "
+ || "attack that involves you using your body to damage, grapple, or shove a target within 5 feet of you." || CHAR(13) || CHAR(10) || CHAR(9) || "Whenever you use your "
+ || "Unarmed Strike, choose one of the following options for its effect." || CHAR(13) || CHAR(10) || CHAR(9) || "Damage: You make an attack roll against the target.  Your "
+ || "bonus to the roll equals your strength modifier plus your Proficiency Bonus.  On a hit, the target takes Bludgeoning damage equal to 1 plus your Strength modifier."
+ || "Grapple: Thr target must succeed on a Strength or Dexterity saving throw (it chooses which), or it has the Grappled condition.  The DC for the saving throw and any "
+ || "escape attempts equals 8 plus your Strength modifier and Proficiency Bonus.  This grapple is possible only if the target is no more than one size larger than you and "
+ || "if you have a hand free to grab it." || CHAR(13) || CHAR(10) || CHAR(9) || "Shove: The target must succeed on a Strength or Dexterity saving throw (it chooses which), "
+ || "or you either push it 5 feet away or cause it to have the Prone condition.  The DC for the saving throw equals 8 plus your Strength modifier and Proficiency Bonus.  "
+ || "This shove is possible only if the target is no more than one size larger than you."
 ),
 ( --149
     "Unconscious",
@@ -832,7 +894,7 @@ VALUES
 ),
 ( --150
     "Unoccupied Space",
-    ""
+    "A space is unoccupied if no creatures are in it and it isn't completely filled by objects."
 ),
 ( --151
     "Utilize",
@@ -841,13 +903,13 @@ VALUES
 ),
 ( --152
     "Vulnerability",
-    ""
+    "If you have Vulnerability to a damage type, damage of that type is doubled against you.  Vulnerability is applied only once to an instance of damage."
 ),
 ( --153
     "Weapon",
-    ""
+    "A weapon is an object that is in the Simple or Martial weapon category."
 ),
 ( --154
     "Weapon Attack",
-    ""
+    "A weapon attack is an attack roll made with a weapon."
 );
