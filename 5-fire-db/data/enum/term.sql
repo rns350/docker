@@ -466,15 +466,24 @@ VALUES
 ),
 ( --84
     "Illusions",
-    ""
+    "Spells and other effects sometimes create magical illusions.  Such an effect defines what the illusion does and which senses or mental faculties it deceives."
+ || CHAR(13) || CHAR(10) || CHAR(9) || "if an illusion manifests in a space, the illusion is insubstantial and weightless, yet it seems to be affected by the "
+ || "environment as if the illusion were real unless the effect that created it specifies otherwise.  For example a visual illusion of a creature casts shadows and "
+ || "reflections, and wind appears to affect the illusory creature.  Similarly, an audible illusion echoes in an echoey space."
 ),
 ( --85
     "Immunity",
-    ""
+    "If you have Immunity to a damage type or a condition, it doesn't affect you in any way."
 ),
 ( --86
     "Improvised Weapons",
-    ""
+    "An improvisedwapon is an object wielded as a makeshift weapon, such as broken glass, a table leg, or a frying pan.  A Simple or Martial weapon also counts as an "
+ || "improvised weapon if it's wielded in a way contrary to its design; if you use a Ranged weapon to make a melee attack or throw a Melee weapon that lacks the Thrown "
+ || "property, the weapon counts as an improvised weapon.  An improvised weapon follows the rules below."  || CHAR(13) || CHAR(10) || CHAR(9) || "Proficiency: Don't add "
+ || "your Proficiency Bonus to attack rolls with an improvised weapon."  || CHAR(13) || CHAR(10) || CHAR(9) || "Damage: On a hit, the weapon deals 1d4 damage of a type the "
+ || "DM thinks is appropriate for the object"  || CHAR(13) || CHAR(10) || CHAR(9) || "Range: If you throw the weapon, it has a normal range of 20 feet and a long range of "
+ || "60 feet."  || CHAR(13) || CHAR(10) || CHAR(9) || "Weapon Equivalents: If an improvised weapon resembles a Simple or Martial weapon, the DM may say it functions as "
+ || "that weapon and uses that weapon's rules.  For example, the DM could treat a table leg as a Club."
 ),
 ( --87
     "Incapacitated",
@@ -500,7 +509,9 @@ VALUES
 ),
 ( --90
     "Initiative",
-    ""
+    "Initiative determines the order of turns during combat."  || CHAR(13) || CHAR(10) || CHAR(9) || "Sometimes a DM might have combatants use their initiative scores instead "
+  || CHAR(13) || CHAR(10) || CHAR(9) || "of rolling Initiative.  Your Initiative score equals 10 plus your Dexterity modifier: If you have Advantage on Initiative rolls, "
+  || "increase your initiative score by 5.  If you have Disadvantage on those rolls, decrease that score by 5."
 ),
 ( --91
     "Invisible",
@@ -511,15 +522,17 @@ VALUES
 ),
 ( --92
     "Jumping",
-    ""
+    "When you jump, you make either a Long Jump (horizontal) or a High Jump (vertical)."
 ),
 ( --93
     "Knocking Out a Creature",
-    ""
+    "When you would reduce a creature to 0 Hit Points with a melee attack, you can instead reduce the creature to 1 Hit Point.  The creature then has the Unconscious "
+ || "condition and starts a Short Rest."  || CHAR(13) || CHAR(10) || CHAR(9) || "The creature remains Unconscious until it regains any Hit Points or until someone uses "
+ || "an action to administer first aid to it, which requires a successful DC 10 Wisdom (Medicine) check."
 ),
 ( --94
     "Lightly Obscured",
-    ""
+    "You have Disadvantage on Wisdom (Perception) checks to see something in a Lightly Obscured space."
 ),
 ( --95
     "Line",
@@ -528,11 +541,27 @@ VALUES
 ),
 ( --96
     "Long Jump",
-    ""
+    "When you make a Long Jump, you leap horizontally a number of feet up to your Strength score if you move at least 10 feet immediately before the jump.  When you make "
+ || "a standing Long Jump, you can leap only half that distance.  Either way, each foot you jump costs a foot of movement."  || CHAR(13) || CHAR(10) || CHAR(9) || "If you "
+ || "land in Difficult Terrain, you must succeed on a DC 10 Dexterity (Acrobatics) check of have the Prone condition."  || CHAR(13) || CHAR(10) || CHAR(9) || "This Long "
+ || "Jump rule assumes that the height of the jump doesn't matter, such as a jump across a stream or chasm.  At your DM's option, you must succeed on a DC 10 Strength "
+ || "(Athletics) check to clear a low obstacle (no taller than a quarter of the jump's distance), such as a hedge or low wall.  Otherwise, you hit the obstacle."
 ),
 ( --97
     "Long Rest",
-    ""
+    "A Long Rest is a period of extended downtime - at least 8 hours - available to any creature.  During a Long Rest, you sleep for at least 6 hours and perform no more "
+ || "than 2 hours of light activity, such as reading, talking, eating, or standing watch."  || CHAR(13) || CHAR(10) || CHAR(9) || "During sleep, you have the Unconscious "
+ || "condition.  After you finish a long rest, you must wait at least 16 hours before starting another one."  || CHAR(13) || CHAR(10) || CHAR(9) || "Benefits of the Rest: "
+ || "To start a Long Rest, you must have at least 1 Hit Point.  When you finish the rest, you gain the following benefits:" || CHAR(13) || CHAR(10) || CHAR(13) || CHAR(10)
+ || CHAR(9) || "Regain All HP: You regain all lost Hit Points and all spent Hit Point Dice.  If your Hit Point maximum was reduced, it returns to normal."
+ || CHAR(13) || CHAR(10) || CHAR(9) || "Ability Scores Restored: If any of your ability scores were reduced, they return to normal." || CHAR(13) || CHAR(10) || CHAR(9)
+ || "Exhaustion Reduced: If you have the Exhaustion condition, its level decreases by 1." || CHAR(13) || CHAR(10) || CHAR(9) || "Special Feature: Some features are recharged "
+ || "by a Long Rest.  If you have such a feature, it recharges in the way specified in its description." || CHAR(13) || CHAR(10) || CHAR(13) || CHAR(10) || CHAR(9)
+ || "Interrupting the Rest: A Long Rest is stopped by the following interruptions:" || CHAR(13) || CHAR(10) || CHAR(9) || "- Rolling Initiative" || CHAR(13) || CHAR(10) || CHAR(9)
+ || "- casting a spell other than a cantrip." || CHAR(13) || CHAR(10) || CHAR(9) || "- Taking any damage" || CHAR(13) || CHAR(10) || CHAR(9) || "- 1 hour of walking or other "
+ || "physical exertion." || CHAR(13) || CHAR(10) || CHAR(13) || CHAR(10) || CHAR(9) || "If you rested at least 1 hour before the interruption, you gain the benefits of a ."
+ || "Short Rest." || CHAR(13) || CHAR(10) || CHAR(9) || "You can resume a Long Rest immediately after an interruption.  If you do so, the rest requires 1 additional hour "
+ || "per interruption to finish."
 ),
 ( --98
     "Magic",
@@ -542,7 +571,7 @@ VALUES
 ),
 ( --99
     "Magical Effect",
-    ""
+    "An effect is magical if it is created by a spell, a magic item, or a phenomenon that a rule labels as magical."
 ),
 ( --100
     "Malnutrition",
@@ -553,23 +582,25 @@ VALUES
 ),
 ( --101
     "Monster",
-    ""
+    "A monster is a creature controlled by the DM, even if the creature is benevolent."
 ),
 ( --102
     "Nonplayer Character",
-    ""
+    "A nonplayer character (NPC) is a monster that has a personal name and a distinct personality."
 ),
 ( --103
     "Object",
-    ""
+    "An Object is a nonliving, distinct thing.  Composite things, like buildings, comprise more than one Object."
 ),
 ( --104
     "Occupied Space",
-    ""
+    "A space is occupied if a creature is in it or if it is completely filled by objects."
 ),
 ( --105
     "Opportunity Attacks",
-    ""
+    "You can make an Opportunity Attack when a creature that you can see leaves your reach using its action, its Bonus Action, its Reaction, or one of its speeds.  To "
+ || "make the Opportunity Attack, take a Reaction to make one melee attack with a weapon or an Unarmed Strike against the provoking creature.  The attack occurs right "
+ || "before the creature leaves your reach."
 ),
 ( --106
     "Paralyzed",
@@ -580,11 +611,15 @@ VALUES
 ),
 ( --107
     "Passive Perception",
-    ""
+    "Passive Perception is a score that reflects a creature's general awareness of its aurroundings.  The DM uses this score when determining whether a creature notices "
+ || "something without consciously making a Wisdom (Perception) check." || CHAR(13) || CHAR(10) || CHAR(9) || "A creature's passive perception equals 10 plus the creature's "
+ || "Wisdom (Perception) check bonus.  If the creature has Advantage on such checks, increase the score by 5.  If the creature has Disadvantage on them, decrease the score by "
+ || "5.  For example, a level 1 character with a Wisdom of 15 and proficiency in Perception has a Passive Perception of 14 (10 + 2 + 2).  If that character has advantage on "
+ || "Wisdom (Perception) checks, the score becomes 19."
 ),
 ( --108
     "Per Day",
-    ""
+    "If a rule says you can use something a certain number of times per day, that means you must finish a Long Rest to use it again after you run out of uses."
 ),
 ( --109
     "Petrified",
@@ -596,7 +631,7 @@ VALUES
 ),
 ( --110
     "Player Character",
-    ""
+    "A player character is a character controlled by a player."
 ),
 ( --111
     "Poisoned",
@@ -605,11 +640,13 @@ VALUES
 ),
 ( --112
     "Possession",
-    ""
+    "Some effects cause a creature to be possessed by another creature or entity.  A possessing effect defines how the possession operates.  Possession can be prevented "
+ || "by the Protection from Evil and Good spell and ended by the Dispel Evil and Good spell."
 ),
 ( --113
     "Proficiency",
-    ""
+    "If you have proficiency with something, you can add your Proficiency Bonus to any D20 Test you make using that thing.  A creature might have proficiency in a skill "
+ || "or saving throw or with a weapon or with a tool."
 ),
 ( --114
     "Prone",
@@ -620,7 +657,9 @@ VALUES
 ),
 ( --115
     "Reaction",
-    ""
+    "A Reaction is a special action taken in response to a trigger defined in the Reaction's description.  You can take a Reaction on another creature's turn, and if you take "
+ || "it on your turn, you can do so even if you also take an action, a Bonus Action, or both.  Once you take a Reaction, you can't take another one until the start of your next "
+ || "turn.  The Opportunity Attack is a Reaction available to all creatures."
 ),
 ( --116
     "Ready",
@@ -635,7 +674,7 @@ VALUES
 ),
 ( --117
     "Resistance",
-    ""
+    "If you have Resistance to a damage type, damage of that type is halved against you (round down).  Resistance is applied only once to an instance of damage."
 ),
 ( --118
     "Restrained",
