@@ -24,6 +24,8 @@ RUN touch ~/.sqliterc &&\
     sqlite3 core.db < data/enum/travel_pace.sql &&\
     sqlite3 core.db < data/creature/skill.sql &&\
     sqlite3 core.db < data/creature/creature_type.sql &&\
+    sqlite3 core.db < data/creature/feat_category.sql &&\
+    sqlite3 core.db < data/creature/feat.sql &&\
     sqlite3 core.db < data/item/object/object_substance.sql &&\
     sqlite3 core.db < data/item/object/object_hit_points_by_size.sql &&\
     sqlite3 core.db < data/item/item.sql &&\
