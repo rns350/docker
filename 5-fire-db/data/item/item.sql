@@ -3,7 +3,7 @@ CREATE TABLE item (
     name VARCHAR(255) NOT NULL,
     weight REAL,
     description TEXT,
-    cost INT NOT NULL
+    cost INT
 );
 
 INSERT INTO item (name, weight, description, cost)
@@ -750,14 +750,472 @@ VALUES
 --157
 ("Forgery Kit", 5, NULL, 1500),
 --158
-("Gaming Set", NULL, NULL, 0),
+("Gaming Set", NULL, NULL, NULL),
 --159
 ("Herbalism Kit", 3, NULL, 500),
 --160
-("Musical Instrument", NULL, NULL, 0),
+("Musical Instrument", NULL, NULL, NULL),
 --161
 ("Navigator's Tools", 2, NULL, 2500),
 --162
 ("Poisoner's Kit", 2, NULL, 5000),
 --163
-("Thieve's Tools", 1, NULL, 2500);
+("Thieve's Tools", 1, NULL, 2500),
+
+----------------------------
+--- PHB Spell Components ---
+----------------------------
+--164
+("Agate", NULL, NULL, 100000),
+--165
+("Air", NULL, NULL, NULL),
+--166
+("Alcohol, Drop", NULL, NULL, NULL),
+--167
+("Ash", NULL, NULL, NULL),
+--168
+("Ashes, Burned Mistletoe", NULL, NULL, NULL),
+--169
+("Bark, Handful", NULL, NULL, NULL),
+--170
+("Bat Fur", NULL, NULL, NULL),
+--171
+("Bat Fur, Bit", NULL, NULL, NULL),
+--172
+("Bat Guano, Ball", NULL, NULL, NULL),
+--173
+("Bile, Drop", NULL, NULL, NULL),
+--174
+("Bitumen, Drop", NULL, NULL, NULL),
+--175
+("Black Onyx Stone", NULL, NULL, 15000),
+--176
+("Black Pearl, Crushed Powder", NULL, NULL, 50000),
+--177
+("Bowl, Gem-Encrusted", NULL, NULL, 100000),
+--178
+("Braid, Ornamental", NULL, NULL, NULL),
+--179
+("Butter", NULL, NULL, NULL),
+--180
+("Carrot, Dried", NULL, NULL, NULL),
+--181
+("Charcoal, Piece", NULL, NULL, NULL),
+--182
+("Chest, 3 Feet by 2 Feet by 2 Feet", NULL, NULL, 500000),
+--183
+("Chest, Tiny Replica", NULL, NULL, 5000),
+--184
+("Clay, Soft", NULL, NULL, NULL),
+--185
+("Coal, Piece", NULL, NULL, NULL),
+--186
+("Cocoon, Caterpillar", NULL, NULL, NULL),
+--187
+("Colorful Sand, Pinch", NULL, NULL, NULL),
+--188
+("Confetti, Pinch", NULL, NULL, NULL),
+--189
+("Copper Piece", NULL, NULL, 1),
+--190
+("Cork, Piece", NULL, NULL, NULL),
+--191
+("Crystal", NULL, NULL, 50000),
+--192
+("Crystal Bead", NULL, NULL, NULL),
+--193
+("Crystal Rod", NULL, NULL, NULL),
+--194
+("Crystal Sphere, Miniature", NULL, NULL, NULL),
+--195
+("Crystal, Small", NULL, NULL, NULL),
+--196
+("Cured Leather, Piece", NULL, NULL, NULL),
+--197
+("Diamond", NULL, NULL, 5000),
+--198
+("Diamond", NULL, NULL, 30000),
+--199
+("Diamond", NULL, NULL, 50000),
+--200
+("Diamond", NULL, NULL, 100000),
+--201
+("Diamond", NULL, NULL, 500000),
+--202
+("Diamond", NULL, NULL, 2500000),
+--203
+("Diamond Dust, Pinch", NULL, NULL, 2500),
+--204
+("Diamond Dust", NULL, NULL, 10000),
+--205
+("Diamond, Powdered", NULL, NULL, 20000),
+--206
+("Diamond, Powdered", NULL, NULL, 100000),
+--207
+("Dirt, Graveyard", NULL, NULL, NULL),
+--208
+("Dirt, Pinch", NULL, NULL, NULL),
+--209
+("Divinitory Tokens (Specially Marked Sticks, Bones, Cards, etc),", NULL, NULL, 2500),
+--210
+("Divination Tools (Cards, Runes, etc),", NULL, NULL, 10000),
+--211
+("Door, Miniature", NULL, NULL, 1500),
+--212
+("Down, Piece", NULL, NULL, 2500),
+--213
+("Drop of Blood", NULL, NULL, NULL),
+--214
+("Dust", NULL, NULL, NULL),
+--215
+("Egg", NULL, NULL, NULL),
+--216
+("Egg, Rotten", NULL, NULL, NULL),
+--217
+("Eggshell", NULL, NULL, NULL),
+--218
+("Electrum Piece", NULL, NULL, 50),
+--219
+("Eye of Newt, Petrified", NULL, NULL, NULL),
+--220
+("Eyeball, in Platinum-Inlaid Vial", NULL, NULL, 40000),
+--221
+("Eyelash, in Gum Arabic", NULL, NULL, NULL),
+--222
+("Fan", NULL, NULL, NULL),
+--223
+("Feather", NULL, NULL, NULL),
+--224
+("Feather, Cockatrice", NULL, NULL, NULL),
+--225
+("Feather, Hummingbird", NULL, NULL, NULL),
+--226
+("Feather, Small", NULL, NULL, NULL),
+--227
+("Feather, White", NULL, NULL, NULL),
+--228
+("Firefly", NULL, NULL, NULL),
+--229
+("Fishtail, in a Gilded Acorn", NULL, NULL, 20000),
+--230
+("Flame", NULL, NULL, NULL),
+--231
+("Fleece, Bit", NULL, NULL, NULL),
+--232
+("Flower, Gilded", NULL, NULL, 30000),
+--233
+("Focus (Crystal Ball, Mirror, Water-Filled Font, etc),", NULL, NULL, 100000),
+--234
+("Fur", NULL, NULL, NULL),
+--235
+("Fur, Bloodhound", NULL, NULL, NULL),
+--236
+("Fur, Bit", NULL, NULL, NULL),
+--237
+("Fur, Tuft", NULL, NULL, NULL),
+--238
+("Gauze, Bit", NULL, NULL, NULL),
+--239
+("Gem", NULL, NULL, 50000),
+--240
+("Gem Dust", NULL, NULL, 500000),
+--241
+("Glass Bead", NULL, NULL, NULL),
+--242
+("Glass Cone", NULL, NULL, NULL),
+--243
+("Glass Eye", NULL, NULL, 10000),
+--244
+("Glass Shard", NULL, NULL, NULL),
+--245
+("Glass Shard, Blue", NULL, NULL, NULL),
+--246
+("Glass Shard, From Mirror", NULL, NULL, NULL),
+--247
+("Glass Sphere", NULL, NULL, NULL),
+--248
+("Glass, Sliver", NULL, NULL, NULL),
+--249
+("Glove", NULL, NULL, NULL),
+--250
+("Gold Dust", NULL, NULL, 2500),
+--251
+("Gold Piece", NULL, NULL, 100),
+--252
+("Granite Cube", NULL, NULL, NULL),
+--253
+("Grasshopper's Hind Leg", NULL, NULL, NULL),
+--254
+("Gum Arabic, Dollop", NULL, NULL, NULL),
+--255
+("Holy Symbol", NULL, NULL, 500),
+--256
+("Honey, Drop", NULL, NULL, NULL),
+--257
+("Ice, Piece", NULL, NULL, NULL),
+--258
+("Incense", NULL, NULL, NULL),
+--259
+("Incense", NULL, NULL, 2500),
+--260
+("Incense", NULL, NULL, 25000),
+--261
+("Incense", NULL, NULL, 100000),
+--262
+("Incense, Burning", NULL, NULL, NULL),
+--263
+("Incense, Burning", NULL, NULL, 1000),
+--264
+("Ink, Rare", NULL, NULL, 5000),
+--265
+("Iron", NULL, NULL, NULL),
+--266
+("Iron Filings", NULL, NULL, NULL),
+--267
+("Iron Piece", NULL, NULL, NULL),
+--268
+("Iron, Powdered, Pinch", NULL, NULL, NULL),
+--269
+("Iron, Straight Piece", NULL, NULL, NULL),
+--270
+("Ivory Strip", NULL, NULL, 5000),
+--271
+("Jacinth", NULL, NULL, 100000),
+--272
+("Jade Circlet", NULL, NULL, 150000),
+--273
+("Jade Dust", NULL, NULL, 1000),
+--274
+("Jade Dust", NULL, NULL, 2500),
+--275
+("Jewel", NULL, NULL, 100000),
+--276
+("Jeweled Horn", NULL, NULL, 10000),
+--277
+("Key Ring, no Keys", NULL, NULL, NULL),
+--278
+("Ladle, Gilded", NULL, NULL, 50000),
+--279
+("Lead, Thin Sheet", NULL, NULL, NULL),
+--280
+("Leather Strap", NULL, NULL, NULL),
+--281
+("Legume Seed", NULL, NULL, NULL),
+--282
+("Licorice Root, Shaving", NULL, NULL, NULL),
+--283
+("Lockbox", NULL, NULL, 40000),
+--284
+("Locust", NULL, NULL, NULL),
+--285
+("Lodestone", NULL, NULL, NULL),
+--286
+("Magnifying Glass", NULL, NULL, NULL),
+--287
+("Makeup", NULL, NULL, NULL),
+--288
+("Mercury Drop", NULL, NULL, NULL),
+--289
+("Metal Rod, Forked", NULL, NULL, 25000),
+--290
+("Metal Spring", NULL, NULL, NULL),
+--291
+("Mica, Chip", NULL, NULL, NULL),
+--292
+("Mitten", NULL, NULL, NULL),
+--293
+("Mistletoe", NULL, NULL, NULL),
+--294
+("Mistletoe, Sprig", NULL, NULL, NULL),
+--295
+("Mixture, Vinegar and Honey", NULL, NULL, NULL),
+--296
+("Mixture, Water and Dust", NULL, NULL, NULL),
+--297
+("Mixture, Water and Sand", NULL, NULL, NULL),
+--298
+("Molasses, Drop", NULL, NULL, NULL),
+--299
+("Moonseed Leaf", NULL, NULL, NULL),
+--300
+("Morsel of Food", NULL, NULL, NULL),
+--301
+("Moss, Phosphorescent", NULL, NULL, NULL),
+--302
+("Mushroom", NULL, NULL, NULL),
+--303
+("Mushroom, Powdered", NULL, NULL, 2500),
+--304
+("Nut Shell", NULL, NULL, NULL),
+--305
+("Object, Engraved with Image of a Dragon", NULL, NULL, 50000),
+--306
+("Oils, Rare", NULL, NULL, 100000),
+--307
+("Paint Brush", NULL, NULL, NULL),
+--308
+("Pearl", NULL, NULL, 10000),
+--309
+("Pebble", NULL, NULL, NULL),
+--310
+("Pentacle", NULL, NULL, NULL),
+--311
+("Phosphorus, Bit", NULL, NULL, NULL),
+--312
+("Phosphorus, Pinch", NULL, NULL, NULL),
+--313
+("Pepper, Hot", NULL, NULL, NULL),
+--314
+("Piece of Flesh", NULL, NULL, NULL),
+--315
+("Pinch of Bone Dust", NULL, NULL, NULL),
+--316
+("Platinum Ring", NULL, NULL, 5000),
+--317
+("Pork Rind", NULL, NULL, NULL),
+--318
+("Prayer Scroll", NULL, NULL, NULL),
+--319
+("Prayer Wheel", NULL, NULL, NULL),
+--320
+("Quartz, Piece", NULL, NULL, NULL),
+--321
+("Reed, Short", NULL, NULL, NULL),
+--322
+("Reliquary", NULL, NULL, NULL),
+--323
+("Reliquary", NULL, NULL, 50000),
+--324
+("Reliquary", NULL, NULL, 100000),
+--325
+("Rhubarb Leaf, Powdered", NULL, NULL, NULL),
+--326
+("Rock, Fractured", NULL, NULL, NULL),
+--327
+("Rope, Segment", NULL, NULL, NULL),
+--328
+("Rose Petals", NULL, NULL, NULL),
+--329
+("Ruby Dust", NULL, NULL, 5000),
+--330
+("Ruby Dust", NULL, NULL, 100000),
+--331
+("Ruby Dust", NULL, NULL, 150000),
+--332
+("Ruby, Powdered", NULL, NULL, 150000),
+--333
+("Salt", NULL, NULL, NULL),
+--334
+("Salt, Pinch", NULL, NULL, NULL),
+--335
+("Sand, Handful", NULL, NULL, NULL),
+--336
+("Sand, Pinch", NULL, NULL, NULL),
+--337
+("Sapphire", NULL, NULL, 100000),
+--338
+("Sesame Seeds, Pinch", NULL, NULL, NULL),
+--339
+("Shovel, Miniature", NULL, NULL, NULL),
+--340
+("Silk, Small Square", NULL, NULL, NULL),
+--341
+("Silver Bar", NULL, NULL, 10000),
+--342
+("Silver Piece", NULL, NULL, 10),
+--343
+("Silver Pin", NULL, NULL, NULL),
+--344
+("Silver, Powdered", NULL, NULL, NULL),
+--345
+("Silver, Powdered", NULL, NULL, 10000),
+--346
+("Silver Rings, Linked Pair", NULL, NULL, NULL),
+--347
+("Silver Rod", NULL, NULL, 1000),
+--348
+("Skull, Gilded", NULL, NULL, 30000),
+--349
+("Smoke, Wisp", NULL, NULL, NULL),
+--350
+("Snake's Tongue", NULL, NULL, NULL),
+--351
+("Soot, Pinch", NULL, NULL, NULL),
+--352
+("Spider", NULL, NULL, NULL),
+--353
+("Spiderweb, Bit", NULL, NULL, NULL),
+--354
+("Statuette of Target", NULL, NULL, 500000),
+--355
+("Statuette of Yourself", NULL, NULL, 500),
+--356
+("Statuette of Yourself, Gem Encrusted", NULL, NULL, 150000),
+--357
+("Stem, Thorny Plant", NULL, NULL, NULL),
+--358
+("String, Bit", NULL, NULL, NULL),
+--359
+("Sunburst Token", NULL, NULL, NULL),
+--360
+("Sulfer", NULL, NULL, NULL),
+--361
+("Sulfer, Pinch", NULL, NULL, NULL),
+--362
+("Sumac Leaf", NULL, NULL, NULL),
+--363
+("Sunstone, Piece", NULL, NULL, NULL),
+--364
+("Sword, Miniature", NULL, NULL, 25000),
+--365
+("Talc, Pinch", NULL, NULL, NULL),
+--366
+("Tart", NULL, NULL, NULL),
+--367
+("Tentacle", NULL, NULL, NULL),
+--368
+("Tentacle, Pickled", NULL, NULL, NULL),
+--369
+("Thorn", NULL, NULL, NULL),
+--370
+("Thorns, Handful", NULL, NULL, NULL),
+--371
+("Tiara, Miniature", NULL, NULL, NULL),
+--372
+("Twig, Forked", NULL, NULL, NULL),
+--373
+("Twig, Struck by Lightning", NULL, NULL, NULL),
+--374
+("Umbrella Miniature", NULL, NULL, NULL),
+--375
+("Vessel, Sealable", NULL, NULL, 200000),
+--376
+("Vial, Bloody", NULL, NULL, 60000),
+--377
+("Water, Droplet", NULL, NULL, NULL),
+--378
+("Water, in a Gold-Inlaid Vial", NULL, NULL, 40000),
+--379
+("Wax, Ball", NULL, NULL, NULL),
+--380
+("Weapon, Melee", NULL, NULL, 1),
+--381
+("Weapon, Melee", NULL, NULL, 10),
+--382
+("Weapon, Proficient", NULL, NULL, 1),
+--383
+("Weapon, Ranged", NULL, NULL, 1),
+--384
+("Whistle, Silver", NULL, NULL, NULL),
+--385
+("White Cloth, Strip", NULL, NULL, NULL),
+--386
+("Wire, Copper", NULL, NULL, NULL),
+--387
+("Wire, Silver", NULL, NULL, NULL),
+--388
+("Wood", NULL, NULL, NULL),
+--389
+("Yew Leaf", NULL, NULL, NULL),
+--390
+("Ziggurat, Miniature", NULL, NULL, NULL);
