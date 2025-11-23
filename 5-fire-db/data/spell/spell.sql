@@ -1,0 +1,5 @@
+CREATE TABLE spell(
+    spell_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name VARCHAR(255) NOT NULL,
+    
+)

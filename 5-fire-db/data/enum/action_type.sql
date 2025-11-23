@@ -5,33 +5,33 @@ CREATE TABLE action_type (
     FOREIGN KEY (term_id) REFERENCES term(term_id)
 );
 
-INSERT INTO action_type (term_id)
+INSERT INTO action_type (action_type_id, term_id)
 VALUES
 ------------------------
 --- PHB Action Types ---
 ------------------------
 
---1 Attack
-(11),
---2 Dash
-(49),
---3 Disengage
-(58),
---4 Dodge
-(59),
---5 Help
-(76),
---6 Hide
-(78),
---7 Influence
-(89),
---8 Magic
-(98),
---9 Ready
-(116),
---10 Search
-(123),
---11 Study
-(136),
---12 Utilize
-(151);
+-- Attack
+(1, 11),
+-- Dash
+(2, 49),
+-- Disengage
+(3, 58),
+-- Dodge
+(4, 59),
+-- Help
+(5, 76),
+-- Hide
+(6, 78),
+-- Influence
+(7, 89),
+-- Magic
+(8, 98),
+-- Ready
+(9, 116),
+-- Search
+(10, 123),
+-- Study
+(11, 136),
+-- Utilize
+(12, 151);

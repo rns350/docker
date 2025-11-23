@@ -6,43 +6,49 @@ CREATE TABLE ability (
     saving_throw_example TEXT NOT NULL
 );
 
-INSERT INTO ability (name, score_measures, check_examples, saving_throw_example)
+INSERT INTO ability (ability_id, name, score_measures, check_examples, saving_throw_example)
 VALUES
 --------------------------
 --- PHB Ability Scores ---
 --------------------------
 
-( --1
+(
+    1,
     "Strength",
     "Physical might",
     "Lift, push, pull, or break something",
     "Physically resist direct force"
 ),
-( --2
+(
+    2,
     "Dexterity",
     "Agility, Reflexes, and Balance",
     "Move nimbly, quickly, or quietly",
     "Dodge out of harm's way"
 ),
-( --3
+(
+    3,
     "Constitution",
     "Health and stamina",
     "Push your body beyond normal limits",
     "Endure a toxic hazard"
 ),
-( --4
+(
+    4,
     "Intelligence",
     "Reasoning and memory",
     "Reason or remember",
     "Recognize an illusion as fake"
 ),
-( --5
+(
+    5,
     "Wisdom",
     "Perceptiveness and mental fortitude",
     "Notice things in the environment or in creatures' behavior",
     "Resist a mental assault"
 ),
-( --6
+(
+    6,
     "Charisma",
     "Confidence, poise, and charm",
     "Influence entertain or deceive",

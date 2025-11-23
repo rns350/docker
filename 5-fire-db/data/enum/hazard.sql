@@ -5,15 +5,15 @@ CREATE TABLE hazard (
     FOREIGN KEY (term_id) REFERENCES term(term_id)
 );
 
-INSERT INTO hazard (term_id)
+INSERT INTO hazard (hazard_id, term_id)
 VALUES
---1 Burning
-(21),
---2 Dehydration
-(53),
---3 Falling
-(66),
---4 Malnutrition
-(100),
---5 Suffocation
-(138);
+-- Burning
+(1, 21),
+-- Dehydration
+(2, 53),
+-- Falling
+(3, 66),
+-- Malnutrition
+(4, 100),
+-- Suffocation
+(5, 138);

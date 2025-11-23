@@ -3,13 +3,11 @@ CREATE TABLE weapon_category (
     name VARCHAR(255) NOT NULL
 );
 
-INSERT INTO weapon_category (name)
+INSERT INTO weapon_category (weapon_category_id, name)
 VALUES
 -----------------------------
 --- PHB Weapon Categories ---
 -----------------------------
 
---1
-("Simple"),
---2
-("Martial");
+(1, "Simple"),
+(2, "Martial");

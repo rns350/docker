@@ -8,19 +8,19 @@ CREATE TABLE ammunition (
     FOREIGN KEY (storage_id) REFERENCES storage(storage_id)
 );
 
-INSERT INTO ammunition (item_id, ammount, storage_id)
+INSERT INTO ammunition (ammunition_id, item_id, ammount, storage_id)
 VALUES
 ----------------------
 --- PHB Ammunition ---
 ----------------------
 
---1 Arrows
-(83, 20, 18),
---2 Bolts
-(84, 20, 6),
---3 Bullets, Firearm
-(85, 10, 17),
---4 Bullets, Sling
-(86, 20, 17),
---5 Needles
-(87, 50, 17);
+-- Arrows
+(1, 83, 20, 18),
+-- Bolts
+(2, 84, 20, 6),
+-- Bullets, Firearm
+(3, 85, 10, 17),
+-- Bullets, Sling
+(4, 86, 20, 17),
+-- Needles
+(5, 87, 50, 17);

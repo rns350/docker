@@ -5,11 +5,11 @@ CREATE TABLE light(
     FOREIGN KEY (term_id) REFERENCES term(term_id)
 );
 
-INSERT INTO light (term_id)
+INSERT INTO light (light_id, term_id)
 VALUES
---1 Bright Light
-(20),
---2 Dim Light
-(56),
---3 Darkness
-(47);
+-- Bright Light
+(1, 20),
+-- Dim Light
+(2, 56),
+-- Darkness
+(3, 47);

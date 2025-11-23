@@ -5,39 +5,39 @@ CREATE TABLE condition (
     FOREIGN KEY (term_id) REFERENCES term(term_id)
 );
 
-INSERT INTO condition (term_id)
+INSERT INTO condition (condition_id, term_id)
 VALUES
 ----------------------
 --- PHB Conditions ---
 ----------------------
 
---1 Blinded
-(15),
---2 Charmed
-(28),
---3 Deafened
-(51),
---4 Exhaustion
-(63),
---5 Frightened
-(70),
---6 Grappled
-(71),
---7 Incapacitated
-(87),
---8 Invisible
-(91),
---9 Paralyzed
-(106),
---10 Petrified
-(109),
---11 Poisoned
-(111),
---12 Prone
-(114),
---13 Restrained
-(118),
---14 Stunned
-(137),
---15 Unconscious
-(149);
+-- Blinded
+(1, 15),
+-- Charmed
+(2, 28),
+-- Deafened
+(3, 51),
+-- Exhaustion
+(4, 63),
+-- Frightened
+(5, 70),
+-- Grappled
+(6, 71),
+-- Incapacitated
+(7, 87),
+-- Invisible
+(8, 91),
+-- Paralyzed
+(9, 106),
+-- Petrified
+(10, 109),
+-- Poisoned
+(11, 111),
+-- Prone
+(12, 114),
+-- Restrained
+(13, 118),
+-- Stunned
+(14, 137),
+-- Unconscious
+(15, 149);

@@ -1,0 +1,3 @@
+On Delete Cascade for any children
+Directly set IDs
+Find an ORM

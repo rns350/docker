@@ -3,17 +3,17 @@ CREATE TABLE area_of_effect(
     term_id INTEGER NOT NULL UNIQUE
 );
 
-INSERT INTO area_of_effect (term_id)
+INSERT INTO area_of_effect (area_of_effect_id, term_id)
 VALUES
---1 Cone
-(33),
---2 Cube
-(39),
---3 Cylinder
-(41),
---4 Emanation
-(60),
---5 Line
-(95),
---6 Sphere
-(133);
+-- Cone
+(1, 33),
+-- Cube
+(2, 39),
+-- Cylinder
+(3, 41),
+-- Emanation
+(4, 60),
+-- Line
+(5, 95),
+-- Sphere
+(6, 133);

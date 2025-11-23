@@ -9,14 +9,15 @@ CREATE TABLE feat(
     FOREIGN KEY (feat_category_id) REFERENCES feat_category(feat_category_id)
 );
 
-INSERT INTO feat (name, feat_category_id, prerequisite, benefit, repeatable)
+INSERT INTO feat (feat_id, name, feat_category_id, prerequisite, benefit, repeatable)
 VALUES
 -----------------
 --- PHB feats ---
 -----------------
 
 --- Origin Feats ---
-( --1
+(   
+    1,
     "Alert",
     1,
     NULL,
@@ -25,7 +26,8 @@ VALUES
  || "if you or the ally has the Incapacitated condition.",
     FALSE
 ),
-( --2
+(   
+    2,
     "Crafter",
     1,
     NULL,
@@ -35,7 +37,8 @@ VALUES
  || "Tools associated with that item and have proficiency with those tools.  The item lasts until you finish another Long Rest, at which point the item falls apart.",
     FALSE
 ),
-( --3
+(   
+    3,
     "Healer",
     1,
     NULL,
@@ -45,7 +48,8 @@ VALUES
  || "Points you restore with with a spell or with this feat's Battle Medic benefit, you can reroll the die if it rolls a 1, and you must use the new roll.",
     FALSE
 ),
-( --4
+(   
+    4,
     "Lucky",
     1,
     NULL,
@@ -55,7 +59,8 @@ VALUES
  || "d20 for an attack roll against you, you can spend 1 Luck Point to impose Disadvantage on that roll.",
     FALSE
 ),
-( --5
+(   
+    5,
     "Magic initiate",
     1,
     NULL,
@@ -68,7 +73,8 @@ VALUES
  || "spell list each time.",
     TRUE
 ),
-( --6
+(   
+    6,
     "Musician",
     1,
     NULL,
@@ -77,7 +83,8 @@ VALUES
  || "and give Heroic inspiration to allies who hear the song.  The number of allies you can affect in this way equals your Proficiency Bonus.",
     FALSE
 ),
-( --7
+(   
+    7,
     "Savage Attacker",
     1,
     NULL,
@@ -85,14 +92,16 @@ VALUES
  || "against the target.",
     FALSE
 ),
-( --8
+(   
+    8,
     "Skilled",
     1,
     NULL,
     "You gain proficiency in any combination of three skills or tolls of your choice." || CHAR(13) || CHAR(10) || CHAR(9) || "Repeatable: You can take this feat more than once.",
     TRUE
 ),
-( --9
+(   
+    9,
     "Tavern Brawler",
     1,
     NULL,
@@ -103,7 +112,8 @@ VALUES
  || "part of the Attack action on your turn, you can deal damage to the target and also push it 5 feet away from you.  You can use this benefit only once per turn.",
     FALSE
 ),
-( --10
+(   
+    10,
     "Tough",
     1,
     NULL,
@@ -111,7 +121,8 @@ VALUES
  || "Hit Point maximum increases by an additional 2 Hit Points.",
     FALSE
 ),
-( --11
+(   
+    11,
     "Ability Score Improvement",
     2,
     "Level 4+",
@@ -119,7 +130,8 @@ VALUES
  || CHAR(13) || CHAR(10) || CHAR(9) || "Repeatable: You can take this feat more than once.",
     TRUE
 ),
-( --12
+(   
+    12,
     "Actor",
     2,
     "Level 4+, Charisma 13+",
@@ -129,7 +141,8 @@ VALUES
  || "A creature that hears the mimicry must succeed on a Wisdom (Insight) check to determine the effect is faked (DC 8 plus your Charisma modifier and Proficiency Bonus).",
     FALSE
 ),
-( --13
+(   
+    13,
     "Athlete",
     2,
     "Level 4+, Strength or Dexterity 13+",
@@ -139,7 +152,8 @@ VALUES
  || "only 5 feet.",
     FALSE
 ),
-( --14
+(   
+    14,
     "Charger",
     2,
     "Level 4+, Strength or Dexterity 13+",
@@ -150,7 +164,8 @@ VALUES
  || "you.  You can use this benefit only once on each of your turns.",
     FALSE
 ),
-( --15
+(   
+    15,
     "Chef",
     2,
     "Level 4+",
@@ -163,7 +178,8 @@ VALUES
  || "can use a Bonus Action to eat one of those treats to gain a number of Temporary Hit Points equal to your Proficiency Bonus.",
     FALSE
 ),
-( --16
+(   
+    16,
     "Crossbow Expert",
     2,
     "Level 4+, Dexterity 13+",
@@ -175,7 +191,8 @@ VALUES
  || "the Light property and you aren't already adding that modifier to the damage.",
     FALSE
 ),
-( --17
+(   
+    17,
     "Crusher",
     2,
     "Level 4+",
@@ -185,7 +202,8 @@ VALUES
  || "Bludgeoning damage to a creature, attack rolls against that creature have Advantage until the start of your next turn.",
     FALSE
 ),
-( --18
+(   
+    18,
     "Defensive Duelist",
     2,
     "Level 4+, Dexterity 13+",
@@ -195,7 +213,8 @@ VALUES
  || "next turn.",
     FALSE
 ),
-( --19
+(   
+    19,
     "Dual Wielder",
     2,
     "Level 4+, Strength or Dexterity 13+",
@@ -206,7 +225,8 @@ VALUES
  || "that lack the Two-Handed property when you would normally be able to draw or stow only one.",
     FALSE
 ),
-( --20
+(   
+    20,
     "Durable",
     2,
     "Level 4+",
@@ -215,7 +235,8 @@ VALUES
  || "Hit Point Dice, roll the die, and regain a number of Hit Points equal to the roll.",
     FALSE
 ),
-( --21
+(   
+    21,
     "Elemental Adept",
     2,
     "Level 4+, Spellcasting or Pact Magic Feature",
@@ -225,7 +246,8 @@ VALUES
  || CHAR(13) || CHAR(10) || CHAR(9) || "Repeatable: You can take this feat more than once, but you must choose a different damage type each time.",
     TRUE
 ),
-( --22
+(   
+    22,
     "Fey-Touched",
     2,
     "Level 4+",
@@ -236,7 +258,8 @@ VALUES
  || "level.  The spells' spellcasting ability is the ability increased by this feat.",
     FALSE
 ),
-( --23
+(   
+    23,
     "Grappler",
     2,
     "Level 4+, Strength or Dexterity 13+",
@@ -247,7 +270,8 @@ VALUES
  || "creature is your size or smaller.",
     FALSE
 ),
-( --24
+(   
+    24,
     "Great Weapon Master",
     2,
     "Level 4+, Strength 13+",
@@ -258,7 +282,8 @@ VALUES
  || "a Bonus Action.",
     FALSE
 ),
-( --25
+(   
+    25,
     "Heavily Armored",
     2,
     "Level 4+, Medium Armor Training",
@@ -266,7 +291,8 @@ VALUES
  || "of 20." || CHAR(13) || CHAR(10) || CHAR(9) || "Armor Training: You gain training with Heavy armor.",
     FALSE
 ),
-( --26
+(   
+    26,
     "Heavy Armor Master",
     2,
     "Level 4+, Heavy Armor Training",
@@ -275,7 +301,8 @@ VALUES
  || "damage dealt to you by that attack is reduced by an amount equal to your Proficiency Bonus.",
     FALSE
 ),
-( --27
+(   
+    27,
     "Inspiring Leader",
     2,
     "Level 4+, Wisdom or Charisma 13+",
@@ -285,7 +312,8 @@ VALUES
  || "Hit Points equal to your character level plus the modifier of the ability you increased with this feature.",
     FALSE
 ),
-( --28
+(   
+    28,
     "Keen Mind",
     2,
     "Level 4+, Intelligence 13+",
@@ -295,7 +323,8 @@ VALUES
  || "Study: You can take the Study action as a Bonus Action.",
     FALSE
 ),
-( --29
+(   
+    29,
     "Lightly Armored",
     2,
     "Level 4+",
@@ -303,7 +332,8 @@ VALUES
  || CHAR(13) || CHAR(10) || CHAR(9) || "Armor Training: You gain training with Light armor and Shields.",
     FALSE
 ),
-( --30
+(   
+    30,
     "Mage Slayer",
     2,
     "Level 4+",
@@ -313,7 +343,8 @@ VALUES
  || "instead.  Once you use this benefit, you can't use it again until you finish a Short or Long Rest.",
     FALSE
 ),
-( --31
+(   
+    31,
     "Martial Weapon Training",
     2,
     "Level 4+",
@@ -321,7 +352,8 @@ VALUES
  || CHAR(13) || CHAR(10) || CHAR(9) || "Weapon Proficiency: You gain proficiency with Martial weapons.",
     FALSE
 ),
-( --32
+(   
+    32,
     "Medium Armor Master",
     2,
     "Level 4+, Medium Armor Training",
@@ -330,7 +362,8 @@ VALUES
  || "or higher.",
     FALSE
 ),
-( --33
+(   
+    33,
     "Moderately Armored",
     2,
     "Level 4+, Light Armor Training",
@@ -338,7 +371,8 @@ VALUES
  || "Armor Training: You gain training with Medium armor.",
     FALSE
 ),
-( --34
+(   
+    34,
     "Mounted Combatant",
     2,
     "Level 4+",
@@ -350,7 +384,8 @@ VALUES
  || "you can force an attack that hits your mount to hit you instead if you don't have the Incapacitated condition.",
     FALSE
 ),
-( --35
+(   
+    35,
     "Observant",
     2,
     "Level 4+, Intelligence or Wisdom 13+",
@@ -360,7 +395,8 @@ VALUES
  || "take the Search action as a Bonus Action.",
     FALSE
 ),
-( --36
+(   
+    36,
     "Piercer",
     2,
     "Level 4+",
@@ -370,7 +406,8 @@ VALUES
  || "you can roll one additional damage die when determining the extra Piercing damage the target takes.",
     FALSE
 ),
-( --37
+(   
+    37,
     "Poisoner",
     2,
     "Level 4+",
@@ -383,7 +420,8 @@ VALUES
  || "of your next turn.",
     FALSE
 ),
-( --38
+(   
+    38,
     "Polearm Master",
     2,
     "Level 4+, Strength or Dexterity 13+",
@@ -394,7 +432,8 @@ VALUES
  || "properties, you can take a Reaction to make one melee attack against a creature that enters the reach you have with that weapon.",
     FALSE
 ),
-( --39
+(   
+    39,
     "Resilient",
     2,
     "Level +4",
@@ -403,7 +442,8 @@ VALUES
  || "ability.",
     FALSE
 ),
-( --40
+(   
+    40,
     "Ritual Caster",
     2,
     "Level 4+, Intelligence, Wisdom, or Charisma 13+",
@@ -415,7 +455,8 @@ VALUES
  || "extended time for a Ritual.  Doing so doesn't require a spell slot.  Once you cast the spell in this way, you can't use this benefit again until you finish a Long Rest.",
     FALSE
 ),
-( --41
+(   
+    41,
     "Sentinel",
     2,
     "Level 4+, Strength or Dexterity 13+",
@@ -425,7 +466,8 @@ VALUES
  || "Speed becomes 0 for the rest of the current turn.",
     FALSE
 ),
-( --42
+(   
+    42,
     "Shadow-Touched",
     2,
     "Level 4+",
@@ -436,7 +478,8 @@ VALUES
  || "level.  The spells' spellcasting ability is the ability increased by this feat.",
     FALSE
 ),
-( --43
+(   
+    43,
     "Sharpshooter",
     2,
     "Level 4+, Dexterity 13+",
@@ -446,7 +489,8 @@ VALUES
  || "Shots: Attacking at long range doesn't impose Disadvantage on your attack rolls with Ranged weapons.",
     FALSE
 ),
-( --44
+(   
+    44,
     "Shield Master",
     2,
     "Level 4+, Shield Training",
@@ -458,7 +502,8 @@ VALUES
  || "only half damage, you can take a Reaction to take no damage if you succeed on the saving throw and are holding a Shield.",
     FALSE
 ),
-( --45
+(   
+    45,
     "Skill Expert",
     2,
     "Level 4+",
@@ -467,7 +512,8 @@ VALUES
  || "but lack Expertise.  you gain Expertise with that skill.",
     FALSE
 ),
-( --46
+(   
+    46,
     "Skulker",
     2,
     "Level 4+, Dexterity 13+",
@@ -477,7 +523,8 @@ VALUES
  || "Sniper: If you make an attack roll while hidden and the roll misses, making the attack roll doesn't reveal your location.",
     FALSE
 ),
-( --47
+(   
+    47,
     "Slasher",
     2,
     "Level 4+",
@@ -488,7 +535,8 @@ VALUES
  || "your size or smaller.",
     FALSE
 ),
-( --48
+(   
+    48,
     "Speedy",
     2,
     "Level 4+, Dexterity or Constitution 13+",
@@ -498,7 +546,8 @@ VALUES
  || "Opportunity Attacks have Disadvantage against you.",
     FALSE
 ),
-( --49
+(   
+    49,
     "Spell Sniper",
     2,
     "Level 4+, Spellcasting or Pact Magic Feature",
@@ -508,7 +557,8 @@ VALUES
  || "When you cast a spell that has a range of at least 10 feet and requires you to make an attack roll, you can increase the spell's range by 60 feet.",
     FALSE
 ),
-( --50
+(   
+    50,
     "Telekinetic",
     2,
     "Level 4+",
@@ -520,7 +570,8 @@ VALUES
  || "toward or away from you.",
     FALSE
 ),
-( --51
+(   
+    51,
     "Telepathic",
     2,
     "Level 4+",
@@ -532,7 +583,8 @@ VALUES
  || "appropriate level.  Your spellcasting ability for the spell is the ability increased by this feat.",
     FALSE
 ),
-( --52
+(   
+    52,
     "War Caster",
     2,
     "Level 4+, Spellcasting or Pact Magic Feature",
@@ -542,7 +594,8 @@ VALUES
  || "at the creature rather than making an Opportunity Attack.  The spell must have a casting time of one action and must target only that creature.",
     FALSE
 ),
-( --53
+(   
+    53,
     "Weapon Master",
     2,
     "Level 4+",
@@ -551,35 +604,40 @@ VALUES
  || "choice, provided you have a proficiency with it.  Whenever you finish a Long Rest, you can change the kind of weapon to another eligible kind.",
     FALSE
 ),
-( --54
+(   
+    54,
     "Archery",
     3,
     "Fighting Style Feature",
     "You gain a +2 bonus to attack rolls you make with Ranged weapons.",
     FALSE
 ),
-( --55
+(   
+    55,
     "Blind Fighting",
     3,
     "Fighting Style Feature",
     "You have Blindsight with a range of 10 feet.",
     FALSE
 ),
-( --56
+(   
+    56,
     "Defense",
     3,
     "Fighting Style Feature",
     "While you're wearing Light, Medium, or Heavy armor, you gain a +1 bonus to Armor Class.",
     FALSE
 ),
-( --57
+(   
+    57,
     "Dueling",
     3,
     "Fighting Style Feature",
     "When you're holding a melee weapon in one hand and no other weapons, you gain a +2 bonus tp damage rolls with that weapon.",
     FALSE
 ),
-( --58
+(   
+    58,
     "Great Weapon Fighting",
     3,
     "Fighting Style Feature",
@@ -587,7 +645,8 @@ VALUES
  || "have the Two-Handed or Versatile property to gain this benefit",
     FALSE
 ),
-( --59
+(   
+    59,
     "Interception",
     3,
     "Fighting Style Feature",
@@ -595,7 +654,8 @@ VALUES
  || "your Proficiency bonus.  You must be holding a Shield or a Simple or Martial weapon to use this Reaction.",
     FALSE
 ),
-( --60
+(   
+    60,
     "Protection",
     3,
     "Fighting Style Feature",
@@ -604,14 +664,16 @@ VALUES
  || "target.",
     FALSE
 ),
-( --61
+(   
+    61,
     "Thrown Weapon Fighting",
     3,
     "Fighting Style Feature",
     "When you hit with a ranged attack roll using a weapon that has the Thrown property, you gain a +2 bonus to the damage roll.",
     FALSE
 ),
-( --62
+(   
+    62,
     "Two-Weapon Fighting",
     3,
     "Fighting Style Feature",
@@ -619,7 +681,8 @@ VALUES
  || "adding it to that damage.",
     FALSE
 ),
-( --63
+(   
+    63,
     "Unarmed Fighting",
     3,
     "Fighting Style Feature",
@@ -628,7 +691,8 @@ VALUES
  || "of your turns, you can deal 1d4 Bludgeoning damage to one creature Grappled by you.",
     FALSE
 ),
-( --64
+(   
+    64,
     "Boon of Combat Prowess",
     4,
     "Level 19+",
@@ -637,7 +701,8 @@ VALUES
  || "next turn.",
     FALSE
 ),
-( --65
+(   
+    65,
     "Boon of Dimensional Travel",
     4,
     "Level 19+",
@@ -646,7 +711,8 @@ VALUES
  || "you can see",
     FALSE
 ),
-( --66
+(   
+    66,
     "Boon of Energy Resistance",
     4,
     "Level 19+",
@@ -658,7 +724,8 @@ VALUES
  || "modifier and Proficiency Bonus) or take damage equal to 2d12 plus your Constitution modifier.",
     FALSE
 ),
-( --67
+(   
+    67,
     "Boon of Fate",
     4,
     "Level 19+",
@@ -667,7 +734,8 @@ VALUES
  || "rolled as a bonus or penalty to the d20 roll.  Once you use this benefit, you can't use it again until you roll Initiative or finish a Short or Long Rest.",
     FALSE
 ),
-( --68
+(   
+    68,
     "Boon of Fortitude",
     4,
     "Level 19+",
@@ -676,7 +744,8 @@ VALUES
  || "Hit Points equal to your Constitution modifier.  Once you've regained these additional Hit Points, you can't do so again until the start of your next turn.",
     FALSE
 ),
-( --69
+(   
+    69,
     "Boon of Irresistible Offense",
     4,
     "Level 19+",
@@ -686,7 +755,8 @@ VALUES
  || "ability score increased by this feet.  The extra damage's type is the same as the attack's type.",
     FALSE
 ),
-( --70
+(   
+    70,
     "Boon of Recovery",
     4,
     "Level 19+",
@@ -697,7 +767,8 @@ VALUES
  || "total.  You regain all the expended dice when you finish a Long Rest.",
     FALSE
 ),
-( --71
+(   
+    71,
     "Boon of Skill",
     4,
     "Level 19+",
@@ -706,7 +777,8 @@ VALUES
  || "you lack Expertise.  you gain Expertise in that skill.",
     FALSE
 ),
-( --72
+(   
+    72,
     "Boon of Speed",
     4,
     "Level 19+",
@@ -715,7 +787,8 @@ VALUES
  || CHAR(13) || CHAR(10) || CHAR(9) || "Quickness: Your Speed increases by 30 feet.",
     FALSE
 ),
-( --73
+(   
+    73,
     "Boon of Spell Recall",
     4,
     "Level 19+",
@@ -724,7 +797,8 @@ VALUES
  || "slot's level, the slot isn't expended.",
     FALSE
 ),
-( --74
+(   
+    74,
     "Boon of the Night Spirit",
     4,
     "Level 19+",
@@ -733,7 +807,8 @@ VALUES
  || "ends on you immediately after you take an action, a Bonus Action, or a Reaction",
     FALSE
 ),
-( --75
+(   
+    75,
     "Boon of Truesight",
     4,
     "Level 19+",

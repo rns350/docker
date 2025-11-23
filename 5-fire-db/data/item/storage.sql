@@ -5,51 +5,51 @@ CREATE TABLE storage (
     FOREIGN KEY (item_id) REFERENCES item(item_id)
 );
 
-INSERT INTO storage (item_id)
+INSERT INTO storage (storage_id, item_id)
 VALUES
 -------------------
 --- PHB Storage ---
 -------------------
 
---1 Backpack
-(6),
---2 Barrel
-(8),
---3 Basket
-(9),
---4 Bottle, Glass
-(15),
---5 Bucket 
-(16),
---6 Case, Crossbow Bolt 
-(20),
---7 Case, Map or Scroll
-(21),
---8 Chest
-(23),
---9 Component Pouch
-(27),
---10 Flask
-(35),
---11 Jug
-(43),
---12 Lamp
-(45),
---13 Lantern, Bullseye
-(46),
---14 Lantern, Hooded
-(47),
---15 Net
-(53),
---16 Pot, Iron
-(60),
---17 Pouch
-(62),
---18 Quiver
-(64),
---19 Sack
-(69),
---20 Vial
-(81),
---21 Waterskin
-(82);
+-- Backpack
+(1, 6),
+-- Barrel
+(2, 8),
+-- Basket
+(3, 9),
+-- Bottle, Glass
+(4, 15),
+-- Bucket 
+(5, 16),
+-- Case, Crossbow Bolt 
+(6, 20),
+-- Case, Map or Scroll
+(7, 21),
+-- Chest
+(8, 23),
+-- Component Pouch
+(9, 27),
+-- Flask
+(10, 35),
+-- Jug
+(11, 43),
+-- Lamp
+(12, 45),
+-- Lantern, Bullseye
+(13, 46),
+-- Lantern, Hooded
+(14, 47),
+-- Net
+(15, 53),
+-- Pot, Iron
+(16, 60),
+-- Pouch
+(17, 62),
+-- Quiver
+(18, 64),
+-- Sack
+(19, 69),
+-- Vial
+(20, 81),
+-- Waterskin
+(21, 82);

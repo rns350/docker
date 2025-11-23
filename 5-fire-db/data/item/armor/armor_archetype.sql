@@ -12,35 +12,35 @@ CREATE TABLE armor_archetype (
 );
 
 
-INSERT INTO armor_archetype (item_id, armor_category_id, base_armor_class, max_dexterity_modifier, strength_requirement, stealth_disadvantage)
+INSERT INTO armor_archetype (armor_archetype_id, item_id, armor_category_id, base_armor_class, max_dexterity_modifier, strength_requirement, stealth_disadvantage)
 VALUES
 ----------------------------
 --- PHB Armor Archetypes ---
 ----------------------------
 
---1 Padded Armor
-(88, 1, 11, NULL, NULL, TRUE),
---2 Leather Armor
-(89, 1, 11, NULL, NULL, FALSE),
---3 Studded Leather Armor
-(90, 1, 12, NULL, NULL, FALSE),
---4 Hide Armor
-(91, 2, 12, 2, NULL, FALSE),
---5 Chain Shirt
-(92, 2, 13, 2, NULL, FALSE),
---6 Scale Mail
-(93, 2, 14, 2, NULL, TRUE),
---7 Breastplate
-(94, 2, 14, 2, NULL, FALSE),
---8 Half Plate Armor
-(95, 2, 15, 2, NULL, TRUE),
---9 Ring Mail
-(96, 3, 14, 0, NULL, TRUE),
---10 Chain Mail
-(97, 3, 16, 0, 13, TRUE),
---11 Splint Armor
-(98, 3, 17, 0, 15, TRUE),
---12 Plate Armor
-(99, 3, 18, 0, 15, TRUE),
---13 Shield
-(100, 4, 2, 0, NULL, FALSE);
+-- Padded Armor
+(1, 88, 1, 11, NULL, NULL, TRUE),
+-- Leather Armor
+(2, 89, 1, 11, NULL, NULL, FALSE),
+-- Studded Leather Armor
+(3, 90, 1, 12, NULL, NULL, FALSE),
+-- Hide Armor
+(4, 91, 2, 12, 2, NULL, FALSE),
+-- Chain Shirt
+(5, 92, 2, 13, 2, NULL, FALSE),
+-- Scale Mail
+(6, 93, 2, 14, 2, NULL, TRUE),
+-- Breastplate
+(7, 94, 2, 14, 2, NULL, FALSE),
+-- Half Plate Armor
+(8, 95, 2, 15, 2, NULL, TRUE),
+-- Ring Mail
+(9, 96, 3, 14, 0, NULL, TRUE),
+-- Chain Mail
+(10, 97, 3, 16, 0, 13, TRUE),
+-- Splint Armor
+(11, 98, 3, 17, 0, 15, TRUE),
+-- Plate Armor
+(12, 99, 3, 18, 0, 15, TRUE),
+-- Shield
+(13, 100, 4, 2, 0, NULL, FALSE);

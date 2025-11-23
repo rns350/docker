@@ -5,13 +5,13 @@ CREATE TABLE special_sense(
     FOREIGN KEY (term_id) REFERENCES term(term_id)
 );
 
-INSERT INTO special_sense (term_id)
+INSERT INTO special_sense (special_sense_id, term_id)
 VALUES
---1 Blindsight
-(16),
---2 Darkvision
-(48),
---3 Tremorsense
-(146),
---4 Truesight
-(147);
+-- Blindsight
+(1, 16),
+-- Darkvision
+(2, 48),
+-- Tremorsense
+(3, 146),
+-- Truesight
+(4, 147);

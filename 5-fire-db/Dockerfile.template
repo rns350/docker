@@ -35,7 +35,6 @@ RUN touch ~/.sqliterc &&\
     sqlite3 core.db < data/item/object/object_hit_points_by_size.sql &&\
     sqlite3 core.db < data/item/item.sql &&\
     sqlite3 core.db < data/item/adventuring_gear.sql &&\
-    sqlite3 core.db < data/item/spell_component.sql &&\
     sqlite3 core.db < data/item/ammunition.sql &&\
     sqlite3 core.db < data/item/storage.sql &&\
     sqlite3 core.db < data/item/tool.sql &&\
@@ -46,6 +45,8 @@ RUN touch ~/.sqliterc &&\
     sqlite3 core.db < data/item/weapon/weapon_mastery.sql &&\
     sqlite3 core.db < data/item/weapon/weapon_property.sql &&\
     sqlite3 core.db < data/item/weapon/weapon_archetype.sql &&\
+    sqlite3 core.db < data/spell/casting_time.sql &&\
+    sqlite3 core.db < data/spell/spell_component.sql &&\
     sqlite3 core.db < data/vehicle/vehicle.sql &&\
     sqlite3 core.db < data/vehicle/airborne_and_waterborne_vehicle.sql &&\
     sqlite3 core.db < data/vehicle/tack_harness_and_drawn_vehicle.sql &&\
